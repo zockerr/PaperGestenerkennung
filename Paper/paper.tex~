@@ -1,4 +1,7 @@
 \documentclass{llncs}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \begin{document}
 
 \pagestyle{headings}
@@ -20,4 +23,7 @@ Universität Rostock\\
 \email{marian.stein@uni-rostock.de}}
 
 \maketitle
+\tableofcontents
+\section{Habeda}
+\section{schubidu}
 \end{document}
