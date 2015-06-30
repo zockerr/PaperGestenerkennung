@@ -2,6 +2,7 @@
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{amssymb}
 \begin{document}
 
 \pagestyle{headings}
@@ -65,7 +66,45 @@ Im dritten Test wurden die Erkennungsraten von GVF mit denen des \$1 Recognizers
 \subsection{Früherkennung der Gesten}
 Zuletzt wurde die Erkennung der Gesten untersucht, während sie ausgeführt werden. In Graph Z sind die Früherkennungsraten von GVF und GF in Abhängigkeit vom Fortschritt der Geste dargestellt. Es wird deutlich, dass GVF über den ganzen Messbereich bessere Erkennungsraten erreicht als GF. So erzielt GVF im Schnitt bereits nach $10\%$ der Geste eine Genauigkeit $67\%$ und erreicht bereits nach $40\%$ Fortschritt $90\%$ Genauigkeit.
 
-  
+\subsection{Ergebnisse der Versuche mit realen Daten}
+In den Versuchen hat sich gezeigt, dass GVF in der Erkennung von Gesten gleich gut bis besser ist als andere aktuelle Erkennungsmethoden. Darüber hinaus wurde deutlich, dass die im GVF verwendete Student'sche t-Verteilung gegenüber der im GF verwendeten Gaussverteilung weniger auf eine gute Abschätzung von $\sigma$ angewiesen ist. Somit ist diese Methode besser in Anwendungsfällen verwendbar, in denen wenig Trainingsdaten zur Verfügung stehen, und somit $\sigma$ schlecht abgeschätzt werden kann. Eine Verbesserung gegenüber bisher üblichen Methoden stellt der GVF auch dadurch dar, dass bereits während der Gestenausführung Ergebnisse geliefert werden, und die Früherkennung gut genug funktioniert, dass schon nach $10\%$ der Geste Erkennungsgenauigkeiten von über $60\%$ erreicht werden.
+
+\section{Abschätzung der Varianz anhand synthetischer Daten}
+Um die Anpassung an Varianz der Gesten auszuwerten, wurden synthetische Daten verwendet, da menschliche Eingaben keine exakten Werte für die Varianzparameter liefern würden, mit denen die Ergebnisse des GVF verglichen werden könnten. Es wurden zwei Fälle betrachtet: Im ersten Fall wurde nur die Phase und Skalierung der Gesten variiert, im zweiten Fall zusätzlich auch die Rotation. Für die Generierung der Daten wurde eine Viviani-Kurve verwendet:
+\begin{equation}
+C(t)=\left\{\begin{array}{l}
+x(t)=a(1+\cos(t))\\
+y(t)=a\sin(t)\\
+z(t)=2a\sin(t/2)\\
+\end{array}\right.
+\end{equation} 
+
+\subsection{Auswertung der Phasenabschätzung}
+%TODO: Graphen einfügen
+Für diesen Fall wurde als Vorlage eine lineare Abstastung der Viviani-Kurve, und als Testdaten eine kubische Abtastung( $ t \rightarrow t^3 $ ) zu der ein gleichmäßig verteiltes Rauschen hinzugefügt wurde, verwendet. Der Zustandsraum ist hier dreidimensional, bestehend aus der Phase $ p_k \in [0,1] $, der Geschwindigkeit $v_k \in \mathbb{R}$ und der Skalierung $s_k \in \mathbb{R}$, wobei $v_k$ und $s_k$ so normalisiert sind, dass ein Wert von 1 jeweils der Geschwindigkeit bzw. Skalierung der Vorlage entspricht. Um einen Vergleich zu GF machen zu können, wurde $v \rightarrow \infty$ gewählt.
+
+Im Vergleich erreichten beide Verfahren gute Abschätzungen mit durchschnittlichen Fehlern von 1,3 Abtastungen beim GVF, bzw. 2,3 Abtastungen beim GF.
+
+Weiter wurde der Einfluss von $\sigma$ auf die Abschätzungen untersucht. Die Ergebnisse sind in Graph Z dargestellt. Für alle getesteten Werte für $\sigma$ lieferte GVF bessere Abschätzungen als GF, obwohl GF eine genauere Inferenztechnik verwendet. Dies liegt daran, dass GVF ein besseres kontinuierliches Modell verwendet, um die Daten wiederzuspiegeln, sowie an dem Zusammenhang zwischen Geschwindigkeit und Phase, welcher von GF ignoriert wird.
+
+Ebenso stellte sich heraus, dass GVF bessere Abschätzungen in Abhängigkeit von der Stärke des Rauschens liefert, als GF.
+
+\subsection{Auswertung der Rotationsabschätzung}
+%TODO: GRAPHEN!
+Für diesen Versuch wurde die Rotation der Geste mit der Zeit variiert. Die Drehwinkel $\phi$, $\theta$ und $\psi$ für die Drehung entlang der $x$, $y$ und $z$-Achse wurden pro Zeitschritt berechnet durch:
+\begin{equation}
+\begin{array}{rcl}
+\phi(t) & = & t^2\\
+\theta(t) & = & t\\
+\psi(t) & = & -t^{1/3}
+\end{array}
+\end{equation}
+Der Zustandsraum ist hier entsprechend 5-dimensional, bestehend aus $p_k$, $v_k$, $\phi_k$, $\theta_k$ und $\psi_k$. Es wurden die gleichen Tests durchgeführt wie bei der Phasenabschätzung.
+Es stellt sich heraus, dass $\sigma$ wenig Einfluss auf die Genauigkeit der Abschätzung hat, aber dass bei niedrigen Werten für $\sigma$ die Fehlerrate stärker schwankt als bei großen Werten.
+
+\subsection{Ergebnisse der Auswertung synthetischer Daten}
+In beiden Experimenten wurde deutlich, dass $\sigma$ wenig Einfluss auf die Abschätzung hat. Daher ist der Algorithmus auch anwendbar, wenn es nur sehr wenig Trainingsdaten gibt. Ebenso stellte sich heraus, dass die Phasenabschätzung bei festem Rauschen und $\sigma$ mit einem Durchschnittsfehler von 2,3 Abtastungen sehr genau ist. Zuletzt hat die Stärke des Rauschens einen zu erwartenden Einfluss auf die Abschätzung, wobei sie noch gut genug bleibt, dass der Algorithmus auch bei signifikantem Rauschen verwendet werden kann.
+ 
 \bibliography{paper}
 \bibliographystyle{plain}
 \end{document}
