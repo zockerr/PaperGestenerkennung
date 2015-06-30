@@ -43,10 +43,29 @@ Um die Gestenauswertung zu evaluieren, wurde die Gestendatenbank von Wobbrock et
 \item Verwendung von Trainings- und Testdaten mit unterschiedlichen Geschwindigkeiten.
 \item Genauigkeit der Erkennung von Gesten, während sie noch nicht abgeschlossen sind.
 \end{enumerate}
+Bei allen Tests außer 3. wurden Trainings- und Testdaten mit der gleichen Geschwindigkeit gewählt.
 Da GVF auch Veränderungen in den Gesten erkennen und ausgeben soll, ergibt sich für diese Tests ein Zustandsraum $x_k$, der aus der Phase $p_k$, der Geschwindigkeit $v_k$, der Skalierung $s_k$ und dem Drehwinkel $\alpha_k$ besteht.
 
+\subsection{Erkennung von Beispielen gleicher Geschwindigkeit}
+Im ersten Test wurde die durchschnittliche Erkennungsrate sowie die Standartabweichung von GVF mit den erreichten Werten von \$1 Recognizer\cite{Wobbrock2007}, DTW und GF verglichen. 
+Im Vergleich zu GF erreicht GVF eine bessere Erkennungsrate ($98,11 \%$ gegenüber $95,78\%$), was sich darauf zurückführen lässt, dass GVF sich an Skalierung und Drehung anpasst.
+Auch im Vergleich mit den beiden Offline-Methoden erreicht GVF leicht bessere Erkennungsraten ($98,11\%$ gegenüber $97,27\%$ bzw. $97,86\%$).
 
+\subsection{Einfluss der Verteilungparameter auf die Erkennung}
+Im zweiten Test wurde der Einfluss der Standartabweichung $\sigma$ und der Parameter $v$ der Student'schen t-Verteilung auf die Erkennungsrate untersucht. Untersucht wurden dabei für $\sigma$ in Zehnerschritten Werte von 10 bis 150 und für $v$ die Werte $0.5$, $1$, $1.5$ und $\infty$ (hier entspricht die Verteilung einer Gaussverteilung).
 
+Die Ergebnisse sind in Graph X zusammen mit den Erkennungsraten der beiden Offline-Methoden dargestellt.
+%TODO: Graph einfügen
+
+Hier sind zwei Beobachtungen festzustellen. Erstens, dass die Erkennungsrate die Beste ist für beschränkte $\sigma$ und $v$. Zweitens, dass die Verwendung einer Student'schen t-Verteilung anstatt einer Gaussverteilung den Vorteil hat, dass die Erkennungsrate wesentlich weniger von $\sigma$ abhängt.
+
+\subsection{Erkennung von Beispielen verschiedener Geschwindigkeit}
+Im dritten Test wurden die Erkennungsraten von GVF mit denen des \$1 Recognizers verglichen. Diesmal wurden allerdings die Vorlage und die Testgeste aus verschiedenen Geschwindigkeitsgruppen verwendet. Tabelle Y zeigt die Erkennungsraten der unterschielichen Kombinationsmöglichkeiten. Es wird deutlich, dass insgesamt die durchschnittliche Erkennungsrate beider Algorithmen vergleichbar ist ($94,6\%$ gegenüber $94,8\%$). Ebenso fällt auf, dass die schlechtesten Ergebnisse erreicht werden, wenn Vorlage und Testgeste  entgegengesetzte Geschwindigkeiten haben, mit Genaunigkeiten von $88,3\%$ bzw. $85,9\%$.
+
+\subsection{Früherkennung der Gesten}
+Zuletzt wurde die Erkennung der Gesten untersucht, während sie ausgeführt werden. In Graph Z sind die Früherkennungsraten von GVF und GF in Abhängigkeit vom Fortschritt der Geste dargestellt. Es wird deutlich, dass GVF über den ganzen Messbereich bessere Erkennungsraten erreicht als GF. So erzielt GVF im Schnitt bereits nach $10\%$ der Geste eine Genauigkeit $67\%$ und erreicht bereits nach $40\%$ Fortschritt $90\%$ Genauigkeit.
+
+  
 \bibliography{paper}
 \bibliographystyle{plain}
 \end{document}

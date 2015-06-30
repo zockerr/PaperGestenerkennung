@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.16)  28 JUN 2015 15:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.16)  30 JUN 2015 13:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -395,32 +395,35 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 25.
- (./paper.bbl) [1
+ [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./paper.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./paper.bbl) [2] [3] (./p
+aper.aux) ) 
 Here is how much of TeX's memory you used:
- 1506 strings out of 494976
- 16971 string characters out of 6179137
- 77078 words of memory out of 5000000
- 4749 multiletter control sequences out of 15000+600000
- 11073 words of font info for 28 fonts, out of 8000000 for 9000
+ 1508 strings out of 494976
+ 16993 string characters out of 6179137
+ 78078 words of memory out of 5000000
+ 4750 multiletter control sequences out of 15000+600000
+ 11849 words of font info for 29 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 29i,4n,23p,519b,220s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/mar
-ian/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0900.600pk> </home/marian/.texmf
--var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/marian/.texmf-var/fonts
-/pk/ljfour/jknappen/ec/ectt0900.600pk> </home/marian/.texmf-var/fonts/pk/ljfour
-/jknappen/ec/ecrm0900.600pk> </home/marian/.texmf-var/fonts/pk/ljfour/jknappen/
-ec/ecrm1000.600pk> </home/marian/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx144
-0.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-Output written on paper.pdf (1 page, 92565 bytes).
+ 29i,5n,23p,631b,220s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/marian/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0900.600pk
+> </home/marian/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/m
+arian/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/marian/.tex
+mf-var/fonts/pk/ljfour/jknappen/ec/ectt0900.600pk> </home/marian/.texmf-var/fon
+ts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/marian/.texmf-var/fonts/pk/ljfo
+ur/jknappen/ec/ecrm1000.600pk> </home/marian/.texmf-var/fonts/pk/ljfour/jknappe
+n/ec/ecbx1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on paper.pdf (3 pages, 128227 bytes).
 PDF statistics:
- 252 PDF objects out of 1000 (max. 8388607)
- 40 compressed objects within 1 object stream
+ 319 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
