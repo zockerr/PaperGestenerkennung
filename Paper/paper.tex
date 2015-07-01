@@ -24,6 +24,7 @@ Universität Rostock\\
 
 \maketitle
 \section{Einführung}
+Dieser Artikel stellt eine Gestenerkennung / Adaptionssystem für die Mensch-Computer-Interaktion Anwendungen. Er beschreibt eine vorlagenbasierte Erkennungsverfahren, die durch ein Anpassungsprozess, die Geste Variation in Echtzeit verfolgen. Die Wichtigsten Vorteile sind geschätzten Parameter und Erkennungsergebnisse. Die Technik wurde auf verschiedene Weise in einer Benutzerstudie mit 3D freien Raum Gesten ausgewertet. Wobei wurde festgestellt, dass die Verfahren robust gegen Rauschen ist und erfolgreich passt sich an Variationsparameter. Dieses Verfahren führt die Anerkennung genauso gut oder sogar besser als andere Methoden.
 Die Gesten werden in Mensch-Computer Interaktion mit mehreren und verschiedenen Formen der Aktivitätserkennung verwendet. Es besteht ein Bedarf  für aufwendige Interaktionsparadigmen, die sich auf Körperbewegungen oder greifbare Geräte und Schnittstellen basieren. Es gibt bereits Verfahren zur Gestenanerkennung und kontinuierliche Gestenerkennung, die erfolgreich umgesetzt wurden. Diese Verfahren wurden entwickelt um die Geste in den meisten Fällen zu markieren. In diesem Experiment wird ganz neue Technik vorgeschlagen, die über Klassifikation durchgeht, die komplementär Geste markiert, die eine Bewegung kennzeichnet und bietet Möglichkeit, die innovative Interaktion Szenarien zu nutzen.
 Die Benutzer müssen  ständig ihre Bewegungen anzupassen und sich zum Beispiel auf optische oder akustische Rückmeldung verlassen. Die Geste die erkannt werden, können in Vergleich zu Geste Referenzen „verzerrt“ angezeigt werden. Auf solche Änderungen anzupassen, muss ein robustes Erkennungssystem in der Lage sein. Außerdem wäre es nützlich die Parameter der Geste Ausführung während der Leistung schrittweise zu schätzen. Weil das ermöglicht dem System die Berücksichtigung von Schwankungen die während der Bewegung und Aktualisierung der Bewegungsmodell auftreten,  wahrzunehmen. Außerdem solche Parametrisierung  könnte direkt in die Gestaltung der Interaktion verwendet werden.
 Wir schlagen ein neues Gestenerkennungssystem, die in der Lage ist in Echtzeit die berücksichtigen Bewegung und Variation inkrementell während der Durchführung wahrzunehmen und dem Nutzer Parameter zurückliefen. Es können verschiedene Gestenvariationen innerhalb der Geschwindigkeit, Amplitude oder Orientierung aufgenommen werden. Wichtig ist, dass diese Variationen können kontinuierlich während der Ausführung der Gesten geschätzt werden. Diese Methode ist ein Zustandsraummodel, in dem Variationen online geschätzt werden. Dazu braucht man ein Partikelfilter um kontinuierlich auf die Variation der Geste anzupassen.
@@ -49,8 +50,8 @@ Wir definieren Gesten so, dass eine Geste ist eine Körpergliedbewegung die durc
 Das Modell kann mit folgende dynamische System formuliert werden:
 \begin{equation}
 \left\{\begin{array}{l}
-xk = fTR(xk−1, vk−1)\\
-zk = fOB(xk, wk; g)\\
+X_k = f_TR(X_(k−1), V_(k−1))\\
+Z_k = f_OB(X_k, W_k; g)\\
 \end{array}\right.
 \end{equation} 										(1)
 wobei k diskreter Zeitpunkt ist.
@@ -76,7 +77,43 @@ Die Übergangsparameter spielen eine ganz wichtige Rolle für die Anpassung. Sie
 
 \subsection{4.4 Beobachtungsfunktion} 
 Die Beobachtungsfunktion wertet die Genauigkeit der Zustansschätzung gemäsß Eingangsbeobachtung un der Vorlage. Das Verfahren wird wie Diskriminante von der Parameter ds Beobachtungsfunktion gesteuert.
+St(Z_k|f(X_k, g(p_k)),\sum,ν) = C(\sum, ν) (1+ (d^2(Z_k, f(X_k,g))/v))^-(v+K/2)		(4)
 
+C(\sum, v) =  \Gamma((ν/2+K/2))/(\Gamma(v/2)) *  (|\sum|^(-1/2))/ ((ν\pi)^(K/2)
+
+wobei f (xk, g) eine Funktion des Templates g und den Zustandswert bei k ist.  f (xk, g) passt sich die erwartete Vorlage Probe g (Stück), da die Phase pk bei k gegeben ist. Der Abstand d zwischen dem angepassten Vorlageprobe und dem eingehenden Beobachtung ist gegeben durch:
+
+d(Z_k, f(X_k, g)) = \sqrt([Z_k - f(X_k, g)]^T \sum^(-1) [Z_k - f(X_k,g)])			(5)
+
+\subsection(4.5 Inferenz und Implementation)
+Inferenz ist die Echtzeitschätzung der Zustandswerte. Hier wird die  Zustandsprobe aus einem einfacheren Verteilung gezeichnet und dann entsprechend ihrer Bedeutung bei der Schätzung des "true" Verteilung gewichtet. Bei jedem Schritt k stellt ein Teilchen x^i_k einen möglichen Wert des Zustandsraums, der von seiner Wahrscheinlichkeit w^i _k gewichtet wird. Der Erwartungswert der Merkmale, zu dem Zeitpunkt k ist:
+
+X_k = \sum_{i=1}^{N_s}w^î_k X^î_k
+
+wobei N_s bezeichnet die Anzahl der Teilchen. Abgeleitete Merkmalswerte xk bilden den Anpassungsprozess, seit dem Zeitpunkt k. Wir beurteilen die Variationswerteun definieren sie als Zustandsvariablen. 
+
+\subsecion(4.6 Bearbeitung der Anerkennung)
+Schließlich wird das Modell erweitert, um Anerkennung zu behandeln, indem wir mehrere Schablonen in Betracht ziehen. Der Zustandsraum wird geändert um die warscheinlichste Schablone zusätzlich zu den variierenden Gesteneigenschaften zu schätzen.
+ Betrachten M Vorlagen jeweilige Länge L_1 ... L_M bezeichnet durch g^1 ... G^M. Bei der Initialisierung, ordnen wir jedem Zustand Partikel x^i_k eine Geste mit Index zwischen 1 ... M (m_k bezeichnet), auf der Grundlage einer Anfangsverteilung. Im allgemeinen wird eine gleichmäßige Verteilung gewählt. Dies erweitert die Zuatandkonfiguration angewand auf jede Partikel wie folgt: 
+
+X^i_k =
+		\left( X^i_k (1)
+				.
+				.
+				.
+			X^i_k (D)
+				m_k
+		\right) \in \mathbb{R}^D \times \mathbb{N}						(6)
+
+Die Übergangswahrscheinlichkeit wird dann wie folgt angepasst:
+				
+p(X^i_k|X^i_(k-1) = N(X^i-k|A_(X^i_(k-1)), \sum)
+			\sum =diag(\phi_1 ... \phi_D 0).								(7)
+			
+Durch Summieren der Gewichte W^i_k  entsprechend der Partikelgeste Indizes, ist es einfach, die Wahrscheinlichkeit jedes Geste zu berechnen:
+
+p(gî_k|g^m_k) =\sum_{j\in J}^{} w^j_k,  \forall l \in [1,M], \forall m \in [1,M], m \neq l
+wo J = {j \in [1,N_s]/ X^j_k (D+1) = l}.									(8)
 
 \section{Erkennung von realen 2D-Gesten}
 Um die Gestenauswertung zu evaluieren, wurde die Gestendatenbank von Wobbrock et al.\cite{Wobbrock2007} verwendet. Diese enthält Daten von 16 Stiftgesten, die von zehn Teilnehmern in drei verschiedenen Geschwindigkeiten jeweils zehn mal aufgenommen wurden. Für die Versuche wurden pro Geste zufällig aus den Daten eines Teilnehmers jeweils ein Trainings- und ein anderer Testdatensatz ausgewählt. Insgesamt wurden 4 verschiedene Tests durchgeführt, die jeweils 100 Mal wiederholt wurden:
