@@ -1,0 +1,33 @@
+\begin{thebibliography}{1}
+
+\bibitem{Bush:1945lc}
+Vannevar Bush.
+\newblock {As We May Think}.
+\newblock {\em Atlantic Monthly}, 176:101--108, July 1945.
+
+\bibitem{Ferguson:1960fk}
+David~A. Ferguson.
+\newblock Fibonaccian searching.
+\newblock {\em Communications of the ACM}, 3(12):648, December 1960.
+
+\bibitem{Fleiss:1969ys}
+Joseph~L. Fleiss, Jacob Cohen, and B.~S. Everitt.
+\newblock Large sample standard errors of kappa and weighted kappa.
+\newblock {\em Psychological Bulletin}, 72(5):323--327, 1969.
+
+\bibitem{Kahan:1965uq}
+William Kahan.
+\newblock Pracniques: further remarks on reducing truncation errors.
+\newblock {\em Communications of the ACM}, 8(1):40, January 1965.
+
+\bibitem{foobar}
+Max Meier.
+\newblock What {I} did last summer.
+\newblock {\em Journal of unrepeatable experiments}, 17(32):78--95, 1997.
+
+\bibitem{Rauch:1965nx}
+H.~E. Rauch, F.~Tung, and C.~T. Striebel.
+\newblock Maximum likelihood estimates of linear dynamic systems.
+\newblock {\em AIAA Journal}, 3(8):1445--1450, August 1965.
+
+\end{thebibliography}

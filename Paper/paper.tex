@@ -25,6 +25,7 @@ Universität Rostock\\
 \maketitle
 \section{Einführung}
 Dieser Artikel stellt eine Gestenerkennung / Adaptionssystem für die Mensch-Computer-Interaktion Anwendungen. Er beschreibt eine vorlagenbasierte Erkennungsverfahren, die durch ein Anpassungsprozess, die Geste Variation in Echtzeit verfolgen. Die Wichtigsten Vorteile sind geschätzten Parameter und Erkennungsergebnisse. Die Technik wurde auf verschiedene Weise in einer Benutzerstudie mit 3D freien Raum Gesten ausgewertet. Wobei wurde festgestellt, dass die Verfahren robust gegen Rauschen ist und erfolgreich passt sich an Variationsparameter. Dieses Verfahren führt die Anerkennung genauso gut oder sogar besser als andere Methoden.
+
 Die Gesten werden in Mensch-Computer Interaktion mit mehreren und verschiedenen Formen der Aktivitätserkennung verwendet. Es besteht ein Bedarf  für aufwendige Interaktionsparadigmen, die sich auf Körperbewegungen oder greifbare Geräte und Schnittstellen basieren. Es gibt bereits Verfahren zur Gestenanerkennung und kontinuierliche Gestenerkennung, die erfolgreich umgesetzt wurden. Diese Verfahren wurden entwickelt um die Geste in den meisten Fällen zu markieren. In diesem Experiment wird ganz neue Technik vorgeschlagen, die über Klassifikation durchgeht, die komplementär Geste markiert, die eine Bewegung kennzeichnet und bietet Möglichkeit, die innovative Interaktion Szenarien zu nutzen.
 Die Benutzer müssen  ständig ihre Bewegungen anzupassen und sich zum Beispiel auf optische oder akustische Rückmeldung verlassen. Die Geste die erkannt werden, können in Vergleich zu Geste Referenzen „verzerrt“ angezeigt werden. Auf solche Änderungen anzupassen, muss ein robustes Erkennungssystem in der Lage sein. Außerdem wäre es nützlich die Parameter der Geste Ausführung während der Leistung schrittweise zu schätzen. Weil das ermöglicht dem System die Berücksichtigung von Schwankungen die während der Bewegung und Aktualisierung der Bewegungsmodell auftreten,  wahrzunehmen. Außerdem solche Parametrisierung  könnte direkt in die Gestaltung der Interaktion verwendet werden.
 Wir schlagen ein neues Gestenerkennungssystem, die in der Lage ist in Echtzeit die berücksichtigen Bewegung und Variation inkrementell während der Durchführung wahrzunehmen und dem Nutzer Parameter zurückliefen. Es können verschiedene Gestenvariationen innerhalb der Geschwindigkeit, Amplitude oder Orientierung aufgenommen werden. Wichtig ist, dass diese Variationen können kontinuierlich während der Ausführung der Gesten geschätzt werden. Diese Methode ist ein Zustandsraummodel, in dem Variationen online geschätzt werden. Dazu braucht man ein Partikelfilter um kontinuierlich auf die Variation der Geste anzupassen.
@@ -46,14 +47,14 @@ Wir präsentieren Interaktionsprinzipien, die wir als wichtig für Zielanwendung
 
 \section{Zugrunde liegendes Modell}
 Wir definieren Gesten so, dass eine Geste ist eine Körpergliedbewegung die durch eine zeitliche Reiche aus feste Anzahl von Parametern vertreten wird. So wird bei der Eingabe von Geste die Erkennungsaufgabe gestellt, die beste Übereinstimmung mit vorher aufgezeichneten Vorlagen von Gesten auszuwählen.
-\subsection{4.1. Kontinuierliche Zustandsmodell}
+\subsection{ Kontinuierliche Zustandsmodell}
 Das Modell kann mit folgende dynamische System formuliert werden:
 \begin{equation}
 \left\{\begin{array}{l}
-X_k = f_TR(X_(k−1), V_(k−1))\\
-Z_k = f_OB(X_k, W_k; g)\\
+X_k = f_{TR} (X_{k-1}, V_{k-1}) \\
+Z_k = f_{OB} (X_k, W_k; g) \\
 \end{array}\right.
-\end{equation} 										(1)
+\end{equation} 										
 wobei k diskreter Zeitpunkt ist.
 -xk ist ein Vektor der den Systemzustand und Zustand der Elemente unterschiedlichen Geste Eigenschaften vorstellt
 -   FTR ist eine Funktion, die die Entwicklung des Systemzustands regelt
@@ -61,60 +62,102 @@ wobei k diskreter Zeitpunkt ist.
 - Fob ist eine Funktion, die die Beobachtungen zk erzeugt, je über den Systemzustand xk und Messrauschsequenz wk und eine Vorlage Geste g.
 Das Problem wird als ein Verfolgungsproblem formuliert
 
-\subsection{4.2 Zustandsraummodel}
+\subsection{ Zustandsraummodel}
 Der Zustand des Systems besteht aus unterschiedliche Merkmalen und Eigenschaften von Gesten, die über eine lange Zeit geschätzt werden. Der Zustandsraum umfasst die Merkmale, die online bewertet können und folglich als Dauerleistungen während der Interaktion verwendet werden. Die Funktionen werden in jedem Zeitschritt aktualisiert.
 
-\subsection{4.3 Zustandsübergang}
-In diesem Modell, ist die Zustandsübergangsfunktion F_TR linear und durch Matrix A gegeben und als Gauß-Verteilung modeliert: 
-p(X_k|X_(k-1) =  N(X_k|A_X_(k−1),\sum )					(2)
-\sum = diag(\phi_1...\phi_D)
+\subsection{ Zustandsübergang}
 
-Durch Einstellen der Beziehung zwischen der Phase und der Geschwindigkeit wählen wir Einschränkung , entsprechend einer ersten Ordnung Bewegungsgleichung: 
-p_k=p_(k-1) + V_k/T + N(0,\phi_1)						(3)
+In diesem Modell, ist die Zustandsübergangsfunktion $F_{TR}$ linear und durch Matrix A gegeben und als Gauß-Verteilung modelliert: 
 
-wobei T Lange der Vorlage und \phi_1 das erste Element in der Diagonale der \sum. Diese Einschränkung kann durch Einstellen der ersten Zeile der Matrix A in (1 1/T 0 ...0) berücksichtigt werden. Die andere Bedingungen werden in der ersten Zeile auf Null gesetzt.
+\begin{equation}
+\left.\begin{array}{l}
+ p(X_k|X_{k-1}) =  N(X_k|A_{X_{k-1}},\sum )\\\\ 
+		\sum   = diag(\phi_1...\phi_D)             \\
+		\\
+\end{array}\right.		
+\end{equation}
+
+Durch Einstellen der Beziehung zwischen der Phase und der Geschwindigkeit wählen wir Einschränkung, entsprechend einer ersten Ordnung Bewegungsgleichung: 
+\begin{equation}
+\left.\begin{array}{l}
+p_k=p_{k-1} + V_k/T + N(0,\phi_1)	
+\end{array}\right.		
+\end{equation}					
+\\
+wobei $T$ Lange der Vorlage und $\phi_1$ das erste Element in der Diagonale der$ \sum$. Diese Einschränkung kann durch Einstellen der ersten Zeile der Matrix A in $ (1  \frac{1}{T}  0 ...0) $ berücksichtigt werden. Die andere Bedingungen werden in der ersten Zeile auf Null gesetzt.
 Die Übergangsparameter spielen eine ganz wichtige Rolle für die Anpassung. Sie regeln die Dynamik  der Veränderungsschätzung: de Geschwindigkeit der Annäherung an die genaue Schätzung und die Präzision der Schätzung.
 
-\subsection{4.4 Beobachtungsfunktion} 
+\subsection{Beobachtungsfunktion} 
 Die Beobachtungsfunktion wertet die Genauigkeit der Zustansschätzung gemäsß Eingangsbeobachtung un der Vorlage. Das Verfahren wird wie Diskriminante von der Parameter ds Beobachtungsfunktion gesteuert.
-St(Z_k|f(X_k, g(p_k)),\sum,ν) = C(\sum, ν) (1+ (d^2(Z_k, f(X_k,g))/v))^-(v+K/2)		(4)
+\begin{equation}
+\left.\begin{array}{l}
+S_t(Z_k|f(X_k, g(p_k)),\sum,v) = C(\sum, v)(1+ \frac{d^2(Z_k, f(X_k,g)}{v}  )^{-\frac{v+K}{2}}		
+\\
+\end{array}\right.		
+\end{equation}	
+\\
+wo:
+			$\left.\begin{array}{l}
+	    C(\sum, v) =  \frac{\Gamma(v/2+K/2)  }{\Gamma(v/2) }\frac{|\sum|^{-1/2}}{(v \pi)^{K/2}}
+			\end{array}\right.
+\\
+$
+\\
+wobei $f (X_k, g)$ eine Funktion des Templates g und den Zustandswert bei $k$ ist. $ f (X_k, g)$ passt sich die erwartete Vorlage Probe g (Stück), da die Phase pk bei k gegeben ist. Der Abstand d zwischen dem angepassten Vorlageprobe und dem eingehenden Beobachtung ist gegeben durch:
+\begin{equation}
+\left.\begin{array}{l}
+d(Z_k, f(X_k, g)) = \sqrt{[Z_k - f(X_k, g)]^T \sum^{-1} [Z_k - f(X_k,g)]}.			
+\end{array}\right.		
+\end{equation}	
 
-C(\sum, v) =  \Gamma((ν/2+K/2))/(\Gamma(v/2)) *  (|\sum|^(-1/2))/ ((ν\pi)^(K/2)
+\subsection{ Inferenz und Implementation}
+Inferenz ist die Echtzeitschätzung der Zustandswerte. Hier wird die  Zustandsprobe aus einem einfacheren Verteilung gezeichnet und dann entsprechend ihrer Bedeutung bei der Schätzung des "true" Verteilung gewichtet. Bei jedem Schritt k stellt ein Teilchen $x^i_k$ einen möglichen Wert des Zustandsraums, der von seiner Wahrscheinlichkeit $w^i _k$ gewichtet wird. Der Erwartungswert der Merkmale, zu dem Zeitpunkt $k$ ist:
+\\
+\\
+$
+X_k = \sum_{i=1}^{N_s}{w^i_k} X^i_k
+$
+\\
+\\
+wobei $ N_s$ bezeichnet die Anzahl der Teilchen. Abgeleitete Merkmals-werte $x_k$ bilden den Anpassungsprozess, seit dem Zeitpunkt $k$. Wir beurteilen die Variationswerten definieren sie als Zustands variablen. 
 
-wobei f (xk, g) eine Funktion des Templates g und den Zustandswert bei k ist.  f (xk, g) passt sich die erwartete Vorlage Probe g (Stück), da die Phase pk bei k gegeben ist. Der Abstand d zwischen dem angepassten Vorlageprobe und dem eingehenden Beobachtung ist gegeben durch:
-
-d(Z_k, f(X_k, g)) = \sqrt([Z_k - f(X_k, g)]^T \sum^(-1) [Z_k - f(X_k,g)])			(5)
-
-\subsection(4.5 Inferenz und Implementation)
-Inferenz ist die Echtzeitschätzung der Zustandswerte. Hier wird die  Zustandsprobe aus einem einfacheren Verteilung gezeichnet und dann entsprechend ihrer Bedeutung bei der Schätzung des "true" Verteilung gewichtet. Bei jedem Schritt k stellt ein Teilchen x^i_k einen möglichen Wert des Zustandsraums, der von seiner Wahrscheinlichkeit w^i _k gewichtet wird. Der Erwartungswert der Merkmale, zu dem Zeitpunkt k ist:
-
-X_k = \sum_{i=1}^{N_s}w^î_k X^î_k
-
-wobei N_s bezeichnet die Anzahl der Teilchen. Abgeleitete Merkmalswerte xk bilden den Anpassungsprozess, seit dem Zeitpunkt k. Wir beurteilen die Variationswerteun definieren sie als Zustandsvariablen. 
-
-\subsecion(4.6 Bearbeitung der Anerkennung)
-Schließlich wird das Modell erweitert, um Anerkennung zu behandeln, indem wir mehrere Schablonen in Betracht ziehen. Der Zustandsraum wird geändert um die warscheinlichste Schablone zusätzlich zu den variierenden Gesteneigenschaften zu schätzen.
- Betrachten M Vorlagen jeweilige Länge L_1 ... L_M bezeichnet durch g^1 ... G^M. Bei der Initialisierung, ordnen wir jedem Zustand Partikel x^i_k eine Geste mit Index zwischen 1 ... M (m_k bezeichnet), auf der Grundlage einer Anfangsverteilung. Im allgemeinen wird eine gleichmäßige Verteilung gewählt. Dies erweitert die Zuatandkonfiguration angewand auf jede Partikel wie folgt: 
-
+\subsection{Bearbeitung der Anerkennung}
+Schließlich wird das Modell erweitert, um Anerkennung zu behandeln, indem wir mehrere Schablonen in Betracht ziehen. Der Zustandsraum wird geändert um die wahrscheinlichste Schablone zusätzlich zu den variierenden Gersteneigenschaften zu schätzen.
+ Betrachten M Vorlagen jeweilige Länge $L_1 ... L_M$ bezeichnet durch $g^1 ... G^M$. Bei der Initialisierung, ordnen wir jedem Zustand Partikel $x^i_k$ eine Geste mit Index zwischen $1 ... M (m_k bezeichnet)$, auf der Grundlage einer Anfangsverteilung. Im allgemeinen wird eine gleichmäßige Verteilung gewählt. Dies erweitert die Zuatandkonfiguration angewand auf jede Partikel wie folgt: 
+\begin{equation}
+\left.\begin{array}{l}
 X^i_k =
-		\left( X^i_k (1)
-				.
-				.
-				.
-			X^i_k (D)
-				m_k
-		\right) \in \mathbb{R}^D \times \mathbb{N}						(6)
+ $$  \left(\begin{array}{crl}
+ X^i_k (1)\\		
+				.\\
+				.\\
+				.\\
+			X^i_k (D)\\
+				m_k\\ 
+				
+				\end{array}\right\}
+		$$ \in \mathbb{R}^D \times \mathbb{N}						
+\end{array}\right.		
+\end{equation}	
 
 Die Übergangswahrscheinlichkeit wird dann wie folgt angepasst:
-				
-p(X^i_k|X^i_(k-1) = N(X^i-k|A_(X^i_(k-1)), \sum)
-			\sum =diag(\phi_1 ... \phi_D 0).								(7)
+\begin{equation}
+\left.\begin{array}{l}				
+p(X^i_k|X^i_(k-1) = N(X^i-k|A_(X^i_(k-1)), \sum)\\
+			\sum =diag(\phi_1 ... \phi_D 0).								
+\end{array}\right.		
+\end{equation}				
 			
-Durch Summieren der Gewichte W^i_k  entsprechend der Partikelgeste Indizes, ist es einfach, die Wahrscheinlichkeit jedes Geste zu berechnen:
+Durch Summieren der Gewichte $W^i_k$  entsprechend der Partikelgeste Indizes, ist es einfach, die Wahrscheinlichkeit jedes Geste zu berechnen:
 
-p(gî_k|g^m_k) =\sum_{j\in J}^{} w^j_k,  \forall l \in [1,M], \forall m \in [1,M], m \neq l
-wo J = {j \in [1,N_s]/ X^j_k (D+1) = l}.									(8)
-
+$p(g^i_k|g^m_k) =\sum_{j\in J}^{} w^j_k,  \forall l \in [1,M], \forall m \in [1,M], m \neq l
+$
+wo:
+ \begin{equation}
+ \left.\begin{array}{l}	
+J = {j \in [1,N_s]/ X^j_k (D+1) = l}.									
+\end{array}\right.		
+\end{equation}	
 \section{Erkennung von realen 2D-Gesten}
 Um die Gestenauswertung zu evaluieren, wurde die Gestendatenbank von Wobbrock et al.\cite{Wobbrock2007} verwendet. Diese enthält Daten von 16 Stiftgesten, die von zehn Teilnehmern in drei verschiedenen Geschwindigkeiten jeweils zehn mal aufgenommen wurden. Für die Versuche wurden pro Geste zufällig aus den Daten eines Teilnehmers jeweils ein Trainings- und ein anderer Testdatensatz ausgewählt. Insgesamt wurden 4 verschiedene Tests durchgeführt, die jeweils 100 Mal wiederholt wurden:
 \begin{enumerate}
