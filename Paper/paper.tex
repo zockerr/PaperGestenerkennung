@@ -169,11 +169,11 @@ Um die Gestenauswertung zu evaluieren, wurde die Gestendatenbank von Wobbrock et
 \item Genauigkeit der Erkennung von Gesten, während sie noch nicht abgeschlossen sind.
 \end{enumerate}
 Bei allen Tests außer 3. wurden Trainings- und Testdaten mit der gleichen Geschwindigkeit gewählt.
-Da GVF auch Veränderungen in den Gesten erkennen und ausgeben soll, ergibt sich für diese Tests ein Zustandsraum $x_k$, der aus der Phase $p_k$, der Geschwindigkeit $v_k$, der Skalierung $s_k$ und dem Drehwinkel $\alpha_k$ besteht.
+Da der von Caramiaux\cite{Caramiaux2014} beschriebene Gesture Variance Follower(GVF) auch Veränderungen in den Gesten erkennen und ausgeben soll, ergibt sich für diese Tests ein Zustandsraum $x_k$, der aus der Phase $p_k$, der Geschwindigkeit $v_k$, der Skalierung $s_k$ und dem Drehwinkel $\alpha_k$ besteht.
 
 \subsection{Erkennung von Beispielen gleicher Geschwindigkeit}
 Im ersten Test wurde die durchschnittliche Erkennungsrate sowie die Standartabweichung von GVF mit den erreichten Werten von \$1 Recognizer\cite{Wobbrock2007}, DTW und GF verglichen. 
-Im Vergleich zu GF erreicht GVF eine bessere Erkennungsrate ($98,11 \%$ gegenüber $95,78\%$), was sich darauf zurückführen lässt, dass GVF sich an Skalierung und Drehung anpasst.
+Im Vergleich zu dem Gesture Follower(GF) erreicht GVF eine bessere Erkennungsrate ($98,11 \%$ gegenüber $95,78\%$), was sich darauf zurückführen lässt, dass GVF sich an Skalierung und Drehung anpasst.
 Auch im Vergleich mit den beiden Offline-Methoden erreicht GVF leicht bessere Erkennungsraten ($98,11\%$ gegenüber $97,27\%$ bzw. $97,86\%$).
 
 \subsection{Einfluss der Verteilungparameter auf die Erkennung}
