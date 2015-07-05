@@ -231,7 +231,29 @@ In beiden Experimenten wurde deutlich, dass $\sigma$ wenig Einfluss auf die Absc
 \section{Nutzerstudie}
 \subsection{Durchgeführte Experimente}
 %TODO: BILDER!
-Es wurde eine Nutzerstudie durchgeführt, um die Einbindung von GVF in reale Anwendungen zu untersuchen. Hierfür wurde eine Anwendung entwickelt, wo eine Gestenausführung die Wiedergabe eines vordefinierten Tons hervorruft, welcher durch Variationen in der Geste verändert wurde. Hierbei wird die Früherkennung des GVF verwendet, um den Ton abzuspielen, sobald die Wahrscheinlichkeit der Erkennung über 50\% beträgt. Ab dann werden für den Rest der Geste die Abschätzung der Varianzen für die Manipulation des Tons verwendet. Hierbei sorgt eine schnellere/langsamere Ausführung der Geste für eine schnellere/langsamere Wiedergabe des Tons, größere/kleinere Gesten sorgen für eine lautere/leisere Wiedergabe und eine Drehung der Geste regelt die Cut-Off-Frequenz eines Hochpassfilters. Den Teilnehmern werden 7 Aufgaben gestellt, die alle daraus bestehen, einen bestimmten Ton abzuspielen, und ihn dann zu manipulieren. Hierbei ist zu beachten, dass Aufgabe 1 nur das Abspielen eines Tons, Aufgabe 2-4 eine globale Änderung eines Aspekts, Aufgabe 5 eine kontinuierliche Änderung eines Aspekts und Aufgabe 6 und 7 die globale Änderung zweier Aspekte beinhalten. Die Gesten werden von einem infrarotbasiertem System aufgenommen, welches Fingerbewegungen im freien Raum misst. Die Studie wurde mit 10 Teilnehmern durchgeführt, die jede der 3 Gesten 3 Mal pro Aufgabe durchführten. Somit ergeben sich 630 Datensätze.
+Es wurde eine Nutzerstudie durchgeführt, um die Einbindung von GVF in reale Anwendungen zu untersuchen. Hierfür wurde eine Anwendung entwickelt, wo eine Gestenausführung die Wiedergabe eines vordefinierten Tons hervorruft, welcher durch Variationen in der Geste verändert wurde. Hierbei wird die Früherkennung des GVF verwendet, um den Ton abzuspielen, sobald die Wahrscheinlichkeit der Erkennung über 50\% beträgt. Ab dann werden für den Rest der Geste die Abschätzung der Varianzen für die Manipulation des Tons verwendet. Hierbei sorgt eine schnellere/langsamere Ausführung der Geste für eine schnellere/langsamere Wiedergabe des Tons, größere/kleinere Gesten sorgen für eine lautere/leisere Wiedergabe und eine Drehung der Geste regelt die Cut-Off-Frequenz eines Hochpassfilters. Den Teilnehmern werden 7 Aufgaben gestellt, die alle daraus bestehen, einen bestimmten Ton abzuspielen, und ihn dann zu manipulieren. Hierbei ist zu beachten, dass Aufgabe 1 nur das Abspielen eines Tons, Aufgabe 2-4 eine globale Änderung eines Aspekts, Aufgabe 5 eine kontinuierliche Änderung eines Aspekts und Aufgabe 6 und 7 die globale Änderung zweier Aspekte beinhalten. Die Gesten werden von einem infrarotbasiertem System aufgenommen, welches Fingerbewegungen im freien Raum misst. Die Studie wurde mit 10 Teilnehmern durchgeführt, die jede der 3 Gesten 3 Mal pro Aufgabe durchführten. Somit ergeben sich 630 Datensätze. Jede aufgenommene Geste sowie der zugehörige wiedergegebene Ton wurden im Nachhinein analysiert, um die Abschätzung des Algorithmus auszuwerten.
+
+\subsection{Beurteilung der Erkennungsgenauigkeit}
+Zunächst wurde die Erkennungsrate allgemein untersucht. Insgesamt wurden nur 17 Gesten nicht erkannt, es ergibt sich somit eine Erkennungsgenauigkeit von $97,3\%$. Anschließend wurde die Früherkennung der Gesten untersucht. Hierbei galt eine Geste als erkannt, sobald die Erkennungswarscheinlichkeit größer als $50\%$ ist. Im Durchschnitt wurde eine Geste nach $12,6\%$ der Durchführung erkannt.
+
+\subsection{Anpassung einer Eigenschaft}
+In den Aufgaben 2 bis 4 wurden die Teilnehmer beauftragt, eine Eigenschaft(Lautstärke, Geschwindigkeit und den Hochpassfilter) zu manipulieren. Die Ergebnisse wurden mithilfe eines Student'schen T-Tests mit den Ergebnissen von Aufgabe 1 verglichen.
+
+\subsubsection{lauteres Abspielen des Tons}
+%TODO: GRAPHEN
+In dem Diagramm wird deutlich, dass die Teilnehmer in der Lage waren, den Ton lauter als normal abzuspielen, da es signifikante Unterschiede der Mittelwerte von Aufgabe 1 und 2 gab. Ebenso zeigt sich, dass die Teilnehmer die Gesten wie gefordert größer ausgeführt haben, was von der Abschätzung auch wiedergespiegelt wurde.
+
+\subsubsection{schnelleres Abspielen des Tons}
+%TODO: GRAPHEN
+Auch hier waren die Teilnehmer in der Lage, die Aufgabe zu erfüllen, da die durchschnittliche Länge eines Tons kürzer war als bei Aufgabe 1. Es ist aber zu bemerken, dass die Teilnehmer, wenn gebeten den Ton in Originalgeschwindigkeit abzuspielen, ihn etwas langsamer als das Original abspielten. Auch in diesem Versuch erkannte der Algorithmus eine Zunahme der Geschwindigkeit der Geste.
+
+\subsubsection{Beeinflussung des Hochpassfilters}
+%TODO: GRAPHEN
+Obwohl mangels Referenzpunkte für diese Aufgabe keine Nachanalyse der Geste möglich war, wurde vom Algorithmus eine Drehung der Geste gemeldet, was sich in der Anwendung des Hochpassfilters deutlich macht.
+
+\subsection{kontinuierliche Änderung einer Eigenschaft}
+%TODO: GRAPHEN
+In Aufgabe 5 wurde von den Teilnehmern verlangt, den Ton zumächst laut zu spielen und während der Ausführung der Geste leiser zu werden. 
 
 
  
