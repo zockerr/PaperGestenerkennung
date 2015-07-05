@@ -1,4 +1,69 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{Heloir2006}
+A.Heloir, N.Courty, S.Gibet, and F.Multon.
+\newblock Temporal alignment of communicative gesture sequences.
+\newblock {\em Computer Animation and Virtual Worlds 17}, 2006.
+
+\bibitem{Caramiaux2014}
+Baptiste Caramiaux, Nicola Montecchio, Atau Tanaka, and Frédéric Bevilacqua.
+\newblock Adaptive gesture recognition with variation estimation for
+  interactive systems.
+\newblock {\em ACM Transactions on Interactive Intelligent Systems}, (4),
+  Dezember 2014.
+
+\bibitem{Gawrila1995}
+D.M.Gavrila and L.S.Davis.
+\newblock Towards 3-d model-based tracking and recognition of human movement: A
+  multi-view approach.
+\newblock {\em Proceedings of the International Workshop on Automatic Face and
+  Gesture recognition}, 1995.
+
+\bibitem{Rubine1991}
+D.Rubine.
+\newblock Specifying gestures by example.
+\newblock {\em Proceedings of the 18th Annual Conference on Computer Graphics
+  and Interactive Techniques}, 1991.
+
+\bibitem{Forbes2005}
+K.~Forbes and E.~Fiume.
+
+\bibitem{Liu2009}
+J.~Liu, L.~Zhong, J.~Wickramasuriya, and V.~Vasudevan.
+\newblock Uwave: Accelerometer-based personalized gesture recognition and its
+  applications.
+\newblock {\em Pervasive and Mobile Computing 5}, 2009.
+
+\bibitem{BlackandJepson1998a}
+M.Blackand and A.Jepson.
+\newblock A probabilistic framework formatching tempora
+  ltrajectories:condensation based recognition of gestures and expressions.
+\newblock {\em Proceedings of the European Conference on Computer Vision
+  (ECCV’98)}, 1998.
+
+\bibitem{Merrill2006}
+D.~Merrill and J.~A. Paradiso.
+\newblock Personalization, expressivity, and learnability of an implicit
+  mapping strategy for physical interfaces.
+\newblock {\em Proceedings of the CHI Conference on Human Factors in Computing
+  Systems, Extended Abstracts}, 2006.
+
+\bibitem{IsardandBlake1998}
+M.Isard and A.Blake.
+\newblock Condensation conditional density propagation for visual tracking.
+\newblock {\em International Journal of Computer Vision 29}, 1998.
+
+\bibitem{Rabiner1989}
+L.~R. Rabiner.
+\newblock A tutorial on hidden markov models and selected applications in
+  speech recognition.
+\newblock {\em Proceedings of the IEEE}, 1989.
+
+\bibitem{Wilson1999}
+A.~D. Wilson and A.~F. Bobick.
+\newblock Parametric hidden markov models for gesture recognition.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence
+  21}, 1999.
 
 \bibitem{Wobbrock2007}
 O.~Wobbrock, A.~D. Wilson, and Y.~Li.

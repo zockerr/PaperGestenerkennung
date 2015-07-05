@@ -1,3 +1,13 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: paper.aux
 The style file: plain.bst
 Database file #1: paper.bib
+I was expecting a `,' or a `}'---line 46 of file paper.bib
+ :   
+ :   year = {2005},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--there's a number but no volume in Caramiaux2014
+Warning--empty title in Forbes2005
+Warning--empty journal in Forbes2005
+Warning--empty year in Forbes2005
+(There was 1 error message)

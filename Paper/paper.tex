@@ -24,71 +24,73 @@ Universität Rostock\\
 
 \maketitle
 \section{Einführung}
-Dieser Artikel stellt eine Gestenerkennung / Adaptionssystem für die Mensch-Computer-Interaktion Anwendungen. Er beschreibt eine vorlagenbasierte Erkennungsverfahren, die durch ein Anpassungsprozess, die Geste Variation in Echtzeit verfolgen. Die Wichtigsten Vorteile sind geschätzten Parameter und Erkennungsergebnisse. Die Technik wurde auf verschiedene Weise in einer Benutzerstudie mit 3D freien Raum Gesten ausgewertet. Wobei wurde festgestellt, dass die Verfahren robust gegen Rauschen ist und erfolgreich passt sich an Variationsparameter. Dieses Verfahren führt die Anerkennung genauso gut oder sogar besser als andere Methoden.
+Dieser Artikel stellt eine Gestenerkennung / ein Adaptionssystem für die Mensch-Computer-Interaktion vor. Es beschreibt ein vorlagenbasiertes Erkennungsverfahren, das durch einen Anpassungsprozess, die Gestenvariation in Echtzeit verfolgt. Die wichtigsten Vorteile sind geschätzten Parameter und Erkennungsergebnisse. Die Technik wurde auf verschiedene Weisen in einer Benutzerstudie mit 3D Gesten im freien Raum ausgewertet. Hierbei wurde festgestellt, dass das Verfahren robust gegen Rauschen ist und erfolgreich sich an Variationsparameter anpasst. Dieses Verfahren führt die Erkennung genauso gut oder sogar besser als andere Methoden durch.
 
-Die Gesten werden in Mensch-Computer Interaktion mit mehreren und verschiedenen Formen der Aktivitätserkennung verwendet. Es besteht ein Bedarf  für aufwendige Interaktionsparadigmen, die sich auf Körperbewegungen oder greifbare Geräte und Schnittstellen basieren. Es gibt bereits Verfahren zur Gestenanerkennung und kontinuierliche Gestenerkennung, die erfolgreich umgesetzt wurden. Diese Verfahren wurden entwickelt um die Geste in den meisten Fällen zu markieren. In diesem Experiment wird ganz neue Technik vorgeschlagen, die über Klassifikation durchgeht, die komplementär Geste markiert, die eine Bewegung kennzeichnet und bietet Möglichkeit, die innovative Interaktion Szenarien zu nutzen.
-Die Benutzer müssen  ständig ihre Bewegungen anzupassen und sich zum Beispiel auf optische oder akustische Rückmeldung verlassen. Die Geste die erkannt werden, können in Vergleich zu Geste Referenzen „verzerrt“ angezeigt werden. Auf solche Änderungen anzupassen, muss ein robustes Erkennungssystem in der Lage sein. Außerdem wäre es nützlich die Parameter der Geste Ausführung während der Leistung schrittweise zu schätzen. Weil das ermöglicht dem System die Berücksichtigung von Schwankungen die während der Bewegung und Aktualisierung der Bewegungsmodell auftreten,  wahrzunehmen. Außerdem solche Parametrisierung  könnte direkt in die Gestaltung der Interaktion verwendet werden.
-Wir schlagen ein neues Gestenerkennungssystem, die in der Lage ist in Echtzeit die berücksichtigen Bewegung und Variation inkrementell während der Durchführung wahrzunehmen und dem Nutzer Parameter zurückliefen. Es können verschiedene Gestenvariationen innerhalb der Geschwindigkeit, Amplitude oder Orientierung aufgenommen werden. Wichtig ist, dass diese Variationen können kontinuierlich während der Ausführung der Gesten geschätzt werden. Diese Methode ist ein Zustandsraummodel, in dem Variationen online geschätzt werden. Dazu braucht man ein Partikelfilter um kontinuierlich auf die Variation der Geste anzupassen.
+Die Gesten werden für verschiedenen Formen der Aktivitätserkennung verwendet. Es besteht ein Bedarf für aufwändige Interaktionsparadigmen, die auf Körperbewegungen oder greifbare Geräte und Schnittstellen basieren. Es gibt bereits Verfahren zur diskreten und kontinuierliche Gestenerkennung, die erfolgreich umgesetzt wurden. Diese Verfahren wurden entwickelt um die Geste in den meisten Fällen zu markieren. In diesem Experiment wird eine ganz neue Technik vorgeschlagen, die über Klassifikation hinausgeht, eine Bewegung kennzeichnet und die Möglichkeit bietet, innovative Interaktionsszenarien zu nutzen.
+Die Benutzer müssen  ständig ihre Bewegungen anzupassen und sich zum Beispiel auf optische oder akustische Rückmeldung verlassen. Die Gesten, die erkannt werden, können in Vergleich zu Referenzgesten „verzerrt“ angezeigt werden.Ein robustes Erkennnungssystem muss in der Lage sein, sich an solche Änderungen anzupassen. Außerdem wäre es nützlich die Parameter der Geste während der Ausführung schrittweise zu schätzen. Dies ermöglicht dem System die Berücksichtigung von Schwankungen, die während der Bewegung und Aktualisierung des Bewegungsmodells auftreten,  wahrzunehmen. Derartige Parametrisierung  könnte direkt in der Gestaltung der Interaktion verwendet werden.
+Caramiaux et al. \cite{Caramiaux2014} schlägt ein neues Gestenerkennungssystem vor, das in der Lage ist, in Echtzeit die berücksichtigte Bewegung und Variation inkrementell während der Durchführung wahrzunehmen und dem Nutzer Parameter zurückzuliefern. Es können verschiedene Gestenvariationen innerhalb der Geschwindigkeit, Amplitude oder Orientierung aufgenommen werden. Wichtig ist, dass diese Variationen kontinuierlich während der Ausführung der Gesten geschätzt werden können. Diese Methode ist ein Zustandsraummodel, in dem Variationen online geschätzt werden. Dazu braucht man einen Partikelfilter um kontinuierlich die Variation der Geste anzupassen.
 
 
 \section{Ähnliche Arbeiten}
-In diesem Abschnitt untersuchen wir Methoden die am meisten benutzt werden um Gesten, die als mehrdimensionale Zeitreihen für die Mensch-Computer-Interaktion vorgestellt sind, zu erkennen. Die mehrdimensionalen Zeitreihen stellen die Bahn eines Punktes auf einer Oberfläche oder in dem 3D-Raum. 
-Rubine [1991] schlägt eine geometrische Abstandmaß basierend auf Beispiele von Einzeltakt-Gesten. Wobbrock et al. [2007] schlagen eine einfache Template-basierte Methode, die Nutzung der euklidische Abstands nach einer vor Verarbeitungsstufe zur Berücksichtigung geometrischer Variationen (wie Skalierung und Rotation) und Drehzahlschwankungen ermöglicht.
-[Gawrila und Davis, 1995;Liu et al. 2009] schlagen vor Dynamic Time Warping (DTW), das erfordert die Speicherung des gesamten zeitliche Struktur von Geste. Es gibt verschiedene Anwendungen, wie Gestensteuerung [Merrill und Paradiso 2005] kommunikative Krakelfolgen [Heloir et al. 2006], und Abfragen auf Basis menschlichen Bewegung [Forbes und Fiume 2005]. 
-Statistische Methoden, wie Hidden Markov Model (HMM) [Rabiner 1989], die  auf einer Wahrscheinlichkeitsinterpretation basiert der Beobachtungen (Geste Proben) und können zeitliche Trajektorie der Geste durch eine kompakte Darstellung zu modellieren. 
-Variationen in der Geste werden so gehandhabt, zum größten Teil durch Methoden wie HMM dass umfassende Datenbanken verwenden, unter Berücksichtigung aller möglichen Variationen. 
-In diesem Artikel verweisen wir auf Variationen innerhalb Geste Klassen auftreten. Wilson und Bobick [1999] schlagen ein Modell, das berücksichtigt parametrische Änderungen, die in der Ausführung führt.
-Wir werden in diesem Artikel, dass ein adaptiver Ansatz mit einem ausgefahrenen Zustand Modell zeigen und eine andere Decodierschema möglich ist
-Die Methode, die wir vorschlagen, durch die Arbeit von Black und Jepson [1998a] inspiriert, basierend auf die Kondensation Algorithmus [Isard und Blake 1998] für die Anerkennung der raumzeitlichen Geste Vorlagen. Die Umsetzung für die Verfolgung von Geschwindigkeit und Skalierungsänderung erlaubt. Wir verallgemeinern den Ansatz von Black und Jepson [1998a] durch Schätzen nicht nur die Skalierung, sondern auch andere Parameter, wie Rotation.
+In diesem Abschnitt untersuchen wir Methoden die am meisten benutzt werden um Gesten, die als mehrdimensionale Zeitreihen für die Mensch-Computer-Interaktion vorgestellt sind, zu erkennen. Die mehrdimensionalen Zeitreihen stellen die Bahn eines Punktes auf einer Oberfläche oder in dem 3D-Raum dar. 
+Rubine\cite{Rubine1991} schlägt ein geometrisches Abstandmaß basierend auf Beispielen von Einzeltakt-Gesten vor. Wobbrock et al.\cite{Wobbrock2007} schlagen eine einfache Template-basierte Methode vor, die Nutzung des euklidische Abstands nach einer Vorverarbeitungsstufe zur Berücksichtigung geometrischer Variationen (wie Skalierung und Rotation) und Drehzahlschwankungen ermöglicht.
+[Gawrila und Davis\cite{Gawrila1995} und Liu et al.\cite{Liu2009} schlagen Dynamic Time Warping (DTW) vor, das erfordert die Speicherung des gesamten zeitlichen Struktur der Geste. Es gibt verschiedene Anwendungen, wie Gestensteuerung\cite[Merrill et al.]{Merrill2006} kommunikative Gestenfolgen \cite[Heloir et al. 2006]{Heloir2006}, und Abfragen auf Basis menschlicher Bewegung \cite[Forbes und Fiume 2005]{Forbes2005}. 
+Statistische Methoden, wie das Hidden Markov Model (HMM) \cite[Rabiner 1989]{Rabiner1989}, das auf einer Wahrscheinlichkeitsinterpretation der Beobachtungen (Probegesten) basiert und zeitliche Trajektorie der Geste durch eine kompakte Darstellung modellieren kann. 
+Variationen in der Geste werden zum größten Teil durch Methoden wie HMM, die umfassende Datenbanken verwenden, unter Berücksichtigung aller möglichen Variationen. 
+ Wilson und Bobick\cite{Wilson1999} schlagen ein Modell vor, das die parametrische Änderungen in der Ausführung berücksichtigt.
+In diesem Artikel wird gezeigt, dass ein adaptiver Ansatz mit einem ausgefahrenen Zustand Modell und einem anderen Decodierschema möglich ist.
+Die von Caramiaux et al.\cite{Caramiaux2014} vorgeschlagene Methode, durch die Arbeit von Black und Jepson \cite[1998a]{BlackandJepson1998a} inspiriert, basiert auf dem Kondensationsalgorithmus \cite[Isard und Blake 1998]{IsardandBlake1998} für die Anerkennung der raumzeitlichen Vorlagegesten, der die Umsetzung für die Verfolgung von Geschwindigkeit und Skalierungsänderung erlaubt.Caramiaux et al.\cite{Caramiaux2014} verallgemeinern den Ansatz von Black und Jepson [1998a] durch Schätzen nicht nur der Skalierung, sondern auch anderer Parameter, wie Rotation.
 
 
 \section{Interaktionsprinzipien}
-Wir präsentieren Interaktionsprinzipien, die wir als wichtig für Zielanwendungen wie Ton Manipulation oder Visual Processing in Kontexten wie Spiele, interaktive Kunst oder Rehabilitation. Unsere Interaktionsmodel beinhaltet zwei Arten von Kontrolle: die Ausführung von Geste und wie die durchgeführt werden. Die Körperbewegungen werden von einem Bewegungserfassungsgerät erfasst. Der Algorithmus ist in der Lage die Geste ausgeführt zuerkennen, an ihre  Variation und Veränderungen anzupassen und der Variationsparameter mit Berücksichtigung der zuvor gelernten Vorlagen zurückliefern. Die Erkennung und Adaption werden in der Echtzeit durchgeführt. Der Algorithmus Ausgänge werden fortlaufend aktualisiert. Die schematische Darstellung des Interaktionsmodels ist in Benutzers Körperbewegungen gesehen und wird durch ein Sensor-System erfasst. Die Modelausgang hat zwei Komponenten:  einen Index für die anerkannten Gesten und ein Vektor für kontinuierliche Werte der Schätzung der Variation. Zur Erleichterung der schnellen Testsitzungen und um das Lernverfahren so leicht wie möglich zu machen, wird von System nur eine einzige Schablone zum Definieren einer bestimmten Geste Klasse erforderlich.
+Caramiaux et al.\cite{Caramiaux2014} präsentieren Interaktionsprinzipien, die wichtig für Zielanwendungen wie Ton Manipulation oder Visual Processing in Kontexten wie Spiele, interaktive Kunst oder Rehabilitation sind. Ihr Interaktionsmodel beinhaltet zwei Arten von Kontrolle: die Ausführung einer Geste und wie sie durchgeführt wird. Die Körperbewegungen werden von einem Bewegungserfassungsgerät erfasst. Der Algorithmus ist in der Lage die Geste zu erkennen, an ihre  Variation und Veränderungen anzupassen und die Variationsparameter mit Berücksichtigung der zuvor gelernten Vorlagen zurückliefern. Die Erkennung und Adaption werden in Echtzeit durchgeführt. Die Ausgabe des Algorithmus wird fortlaufend aktualisiert. Der Modelausgang hat zwei Komponenten:  einen Index für die erkannten Gesten und einen Vektor für kontinuierliche Werte der Schätzung der Variation. Zur Erleichterung der schnellen Testsitzungen und um das Lernverfahren so leicht wie möglich zu machen, wird von System nur eine einzige Schablone zum Definieren einer bestimmten Geste Klasse erforderlich.
 
 \section{Zugrunde liegendes Modell}
-Wir definieren Gesten so, dass eine Geste ist eine Körpergliedbewegung die durch eine zeitliche Reiche aus feste Anzahl von Parametern vertreten wird. So wird bei der Eingabe von Geste die Erkennungsaufgabe gestellt, die beste Übereinstimmung mit vorher aufgezeichneten Vorlagen von Gesten auszuwählen.
+Wir definieren Gesten so, dass eine Geste ist eine Körpergliedbewegung ist, die durch eine zeitliche Reihe einer festen Anzahl von Parametern vertreten wird. Für eine eingegebene Geste wählt der Erkennungsschritt die beste Übereinstimmung aus einer Menge von Vorlagen aus.
 \subsection{ Kontinuierliche Zustandsmodell}
-Das Modell kann mit folgende dynamische System formuliert werden:
+Das Modell kann mit folgendem dynamischen System formuliert werden:
 \begin{equation}
 \left\{\begin{array}{l}
-X_k = f_{TR} (X_{k-1}, V_{k-1}) \\
-Z_k = f_{OB} (X_k, W_k; g) \\
+x_k = f_{TR} (x_{k-1}, v_{k-1}) \\
+z_k = f_{OB} (x_k, w_k; g) \\
 \end{array}\right.
 \end{equation} 										
 wobei k diskreter Zeitpunkt ist.
--xk ist ein Vektor der den Systemzustand und Zustand der Elemente unterschiedlichen Geste Eigenschaften vorstellt
--   FTR ist eine Funktion, die die Entwicklung des Systemzustands regelt
--vk Rauschsequenz
-- Fob ist eine Funktion, die die Beobachtungen zk erzeugt, je über den Systemzustand xk und Messrauschsequenz wk und eine Vorlage Geste g.
-Das Problem wird als ein Verfolgungsproblem formuliert
+\begin{itemize}
+	\item $x_k$ ist ein Vektor, der den Systemzustand und Zustand der Elemente unterschiedlichen Geste Eigenschaften vorstellt
+	\item $f_{TR}$ ist eine Funktion, die die Entwicklung des Systemzustands regelt
+	\item $v_k$ ist eine Rauschsequenz
+	\item $f_{OB}$ ist eine Funktion, die die Beobachtungen $z_k$ erzeugt, je über den Systemzustand $x_k$ und Messrauschsequenz $w_k$ und eine Vorlage Geste $g$.
+\end{itemize}
+Das Problem wird als ein Verfolgungsproblem formuliert.
 
 \subsection{ Zustandsraummodel}
-Der Zustand des Systems besteht aus unterschiedliche Merkmalen und Eigenschaften von Gesten, die über eine lange Zeit geschätzt werden. Der Zustandsraum umfasst die Merkmale, die online bewertet können und folglich als Dauerleistungen während der Interaktion verwendet werden. Die Funktionen werden in jedem Zeitschritt aktualisiert.
+Der Zustand des Systems besteht aus unterschiedlichen Merkmalen und Eigenschaften von Gesten, die über eine lange Zeit geschätzt werden. Der Zustandsraum umfasst die Merkmale, die online bewertet können und folglich als Dauerleistungen während der Interaktion verwendet werden. Die Funktionen werden in jedem Zeitschritt aktualisiert.
 
 \subsection{ Zustandsübergang}
 
-In diesem Modell, ist die Zustandsübergangsfunktion $F_{TR}$ linear und durch Matrix A gegeben und als Gauß-Verteilung modelliert: 
+In diesem Modell ist die Zustandsübergangsfunktion $f_{TR}$ linear und durch Matrix $A$ gegeben und als Gauß-Verteilung modelliert: 
 
 \begin{equation}
 \left.\begin{array}{l}
  p(X_k|X_{k-1}) =  N(X_k|A_{X_{k-1}},\sum )\\\\ 
-		\sum   = diag(\phi_1...\phi_D)             \\
+		\sum   = diag(\sigma_1...\sigma_D)             \\
 		\\
 \end{array}\right.		
 \end{equation}
 
-Durch Einstellen der Beziehung zwischen der Phase und der Geschwindigkeit wählen wir Einschränkung, entsprechend einer ersten Ordnung Bewegungsgleichung: 
+Durch Festlegen einer Beziehung zwischen Phase und Geschwindigkeit der Geste wurde eine Einschränkung in Form einer Bewegungsgleichung erster Ordnung gemacht. 
 \begin{equation}
 \left.\begin{array}{l}
-p_k=p_{k-1} + V_k/T + N(0,\phi_1)	
+p_k=p_{k-1} + V_k/T + N(0,\sigma_1)	
 \end{array}\right.		
 \end{equation}					
 \\
-wobei $T$ Lange der Vorlage und $\phi_1$ das erste Element in der Diagonale der$ \sum$. Diese Einschränkung kann durch Einstellen der ersten Zeile der Matrix A in $ (1  \frac{1}{T}  0 ...0) $ berücksichtigt werden. Die andere Bedingungen werden in der ersten Zeile auf Null gesetzt.
-Die Übergangsparameter spielen eine ganz wichtige Rolle für die Anpassung. Sie regeln die Dynamik  der Veränderungsschätzung: de Geschwindigkeit der Annäherung an die genaue Schätzung und die Präzision der Schätzung.
+wobei $T$ Lange der Vorlage und $\sigma_1$ das erste Element in der Diagonale der$ \sum$. Diese Einschränkung kann durch Einstellen der ersten Zeile der Matrix A in $ (1  \frac{1}{T}  0 ...0) $ berücksichtigt werden. Die andere Bedingungen werden in der ersten Zeile auf Null gesetzt.
+Die Übergangsparameter spielen eine wichtige Rolle für die Anpassung. Sie regeln die Dynamik  der Veränderungsschätzung: die Geschwindigkeit der Annäherung an die genaue Schätzung und die Präzision der Schätzung.
 
 \subsection{Beobachtungsfunktion} 
-Die Beobachtungsfunktion wertet die Genauigkeit der Zustansschätzung gemäsß Eingangsbeobachtung un der Vorlage. Das Verfahren wird wie Diskriminante von der Parameter ds Beobachtungsfunktion gesteuert.
+Die Beobachtungsfunktion wertet die Genauigkeit der Zustandsschätzung gemäß Eingangsbeobachtung und der Vorlage. Parameter der Beobachtungsfunktion legen fest, wie stark die Methode abweicht.
 \begin{equation}
 \left.\begin{array}{l}
 S_t(Z_k|f(X_k, g(p_k)),\sum,v) = C(\sum, v)(1+ \frac{d^2(Z_k, f(X_k,g)}{v}  )^{-\frac{v+K}{2}}		
@@ -97,13 +99,12 @@ S_t(Z_k|f(X_k, g(p_k)),\sum,v) = C(\sum, v)(1+ \frac{d^2(Z_k, f(X_k,g)}{v}  )^{-
 \end{equation}	
 \\
 wo:
-			$\left.\begin{array}{l}
-	    C(\sum, v) =  \frac{\Gamma(v/2+K/2)  }{\Gamma(v/2) }\frac{|\sum|^{-1/2}}{(v \pi)^{K/2}}
-			\end{array}\right.
-\\
-$
-\\
-wobei $f (X_k, g)$ eine Funktion des Templates g und den Zustandswert bei $k$ ist. $ f (X_k, g)$ passt sich die erwartete Vorlage Probe g (Stück), da die Phase pk bei k gegeben ist. Der Abstand d zwischen dem angepassten Vorlageprobe und dem eingehenden Beobachtung ist gegeben durch:
+\begin{equation}
+\left.\begin{array}{l}
+C(\sum, v) =  \frac{\Gamma(v/2+K/2)  }{\Gamma(v/2) }\frac{|\sum|^{-1/2}}{(v \pi)^{K/2}}
+\end{array}\right.
+\end{equation}
+wobei $f (X_k, g)$ eine Funktion des Templates $g$ und den Zustandswert bei $k$ ist. $ f (X_k, g)$ passt sich die erwartete Vorlage Probe $g$ (Stück), da die Phase $p_k$ bei $k$ gegeben ist. Der Abstand $d$ zwischen der angepassten Vorlageprobe und dem eingehenden Beobachtung ist gegeben durch:
 \begin{equation}
 \left.\begin{array}{l}
 d(Z_k, f(X_k, g)) = \sqrt{[Z_k - f(X_k, g)]^T \sum^{-1} [Z_k - f(X_k,g)]}.			
@@ -111,19 +112,19 @@ d(Z_k, f(X_k, g)) = \sqrt{[Z_k - f(X_k, g)]^T \sum^{-1} [Z_k - f(X_k,g)]}.
 \end{equation}	
 
 \subsection{ Inferenz und Implementation}
-Inferenz ist die Echtzeitschätzung der Zustandswerte. Hier wird die  Zustandsprobe aus einem einfacheren Verteilung gezeichnet und dann entsprechend ihrer Bedeutung bei der Schätzung des "true" Verteilung gewichtet. Bei jedem Schritt k stellt ein Teilchen $x^i_k$ einen möglichen Wert des Zustandsraums, der von seiner Wahrscheinlichkeit $w^i _k$ gewichtet wird. Der Erwartungswert der Merkmale, zu dem Zeitpunkt $k$ ist:
+Inferenz ist die Echtzeitschätzung der Zustandswerte. Hier wird die  Zustandsprobe aus einer einfacheren Verteilung entnommen und entsprechend ihrer Bedeutung bei der Schätzung der "wahren" Verteilung gewichtet. Bei jedem Schritt $k$ stellt ein Teilchen $x^i_k$ einen möglichen Wert des Zustandsraums, der von seiner Wahrscheinlichkeit $w^i _k$ gewichtet wird. Der Erwartungswert der Merkmale, zu dem Zeitpunkt $k$ ist:
 \\
 \\
 $
-X_k = \sum_{i=1}^{N_s}{w^i_k} X^i_k
+\hat{X}_k = \sum_{i=1}^{N_s}{w^i_k} X^i_k
 $
 \\
 \\
-wobei $ N_s$ bezeichnet die Anzahl der Teilchen. Abgeleitete Merkmals-werte $x_k$ bilden den Anpassungsprozess, seit dem Zeitpunkt $k$. Wir beurteilen die Variationswerten definieren sie als Zustands variablen. 
+wobei $ N_s$ die Anzahl der Teilchen bezeichnet. Abgeleitete Merkmalswerte $\hat{X}_k$ bilden den Anpassungsprozess, seit dem Zeitpunkt $k$. Es werden die Variationswerte beurteilt, die als Zustandsvariablen definiert sind. 
 
 \subsection{Bearbeitung der Anerkennung}
-Schließlich wird das Modell erweitert, um Anerkennung zu behandeln, indem wir mehrere Schablonen in Betracht ziehen. Der Zustandsraum wird geändert um die wahrscheinlichste Schablone zusätzlich zu den variierenden Gersteneigenschaften zu schätzen.
- Betrachten M Vorlagen jeweilige Länge $L_1 ... L_M$ bezeichnet durch $g^1 ... G^M$. Bei der Initialisierung, ordnen wir jedem Zustand Partikel $x^i_k$ eine Geste mit Index zwischen $1 ... M (m_k bezeichnet)$, auf der Grundlage einer Anfangsverteilung. Im allgemeinen wird eine gleichmäßige Verteilung gewählt. Dies erweitert die Zuatandkonfiguration angewand auf jede Partikel wie folgt: 
+Schließlich wird das Modell erweitert, um Erkennung zu behandeln, indem mehrere Schablonen in Betracht gezogen werden. Der Zustandsraum wird geändert, um die wahrscheinlichste Schablone zusätzlich zu den variierenden Gesteneigenschaften zu schätzen.
+Betrachtet werden M Vorlagen jeweiliger Länge $L_1 ... L_M$ bezeichnet durch $g^1 ... G^M$. Bei der Initialisierung, wird jedem Zustandspartikel $x^i_k$ eine Geste mit Index zwischen $1 ... M (m_k bezeichnet)$ zugeordnet, auf der Grundlage einer Anfangsverteilung. Im allgemeinen wird eine gleichmäßige Verteilung gewählt. Dies erweitert die Zustandskonfiguration angewandt auf jedes Partikel wie folgt: 
 \begin{equation}
 \left.\begin{array}{l}
 X^i_k =
@@ -135,12 +136,12 @@ X^i_k =
 			X^i_k (D)\\
 				m_k\\ 
 				
-				\end{array}\right\}
+				\end{array}\right)
 		$$ \in \mathbb{R}^D \times \mathbb{N}						
 \end{array}\right.		
 \end{equation}	
 
-Die Übergangswahrscheinlichkeit wird dann wie folgt angepasst:
+Die Übergangswahrscheinlichkeit wird wie folgt angepasst:
 \begin{equation}
 \left.\begin{array}{l}				
 p(X^i_k|X^i_(k-1) = N(X^i-k|A_(X^i_(k-1)), \sum)\\
@@ -148,7 +149,7 @@ p(X^i_k|X^i_(k-1) = N(X^i-k|A_(X^i_(k-1)), \sum)\\
 \end{array}\right.		
 \end{equation}				
 			
-Durch Summieren der Gewichte $W^i_k$  entsprechend der Partikelgeste Indizes, ist es einfach, die Wahrscheinlichkeit jedes Geste zu berechnen:
+Durch Summieren der Gewichte $W^i_k$  der zugehörigen Gestenindizes der Partikel, ist es einfach, die Wahrscheinlichkeit jeder Geste zu berechnen:
 
 $p(g^i_k|g^m_k) =\sum_{j\in J}^{} w^j_k,  \forall l \in [1,M], \forall m \in [1,M], m \neq l
 $
