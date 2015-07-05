@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amssymb}
+\usepackage{graphicx}
 \begin{document}
 \pagestyle{headings}
 
@@ -176,10 +177,18 @@ Im Vergleich zu GF erreicht GVF eine bessere Erkennungsrate ($98,11 \%$ gegenüb
 Auch im Vergleich mit den beiden Offline-Methoden erreicht GVF leicht bessere Erkennungsraten ($98,11\%$ gegenüber $97,27\%$ bzw. $97,86\%$).
 
 \subsection{Einfluss der Verteilungparameter auf die Erkennung}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{../Bilder/Fig4}
+\caption{Einfluss des Parameters $v$ und der Standardabweichung auf die Erkennungsrate}
+\label{fig:Fig}
+\end{figure}
+
 Im zweiten Test wurde der Einfluss der Standartabweichung $\sigma$ und der Parameter $v$ der Student'schen t-Verteilung auf die Erkennungsrate untersucht. Untersucht wurden dabei für $\sigma$ in Zehnerschritten Werte von 10 bis 150 und für $v$ die Werte $0.5$, $1$, $1.5$ und $\infty$ (hier entspricht die Verteilung einer Gaussverteilung).
 
-Die Ergebnisse sind in Graph X zusammen mit den Erkennungsraten der beiden Offline-Methoden dargestellt.
-%TODO: Graph einfügen
+Die Ergebnisse sind in Abbildung \ref{fig:Fig} zusammen mit den Erkennungsraten der beiden Offline-Methoden dargestellt.
+
 
 Hier sind zwei Beobachtungen festzustellen. Erstens, dass die Erkennungsrate die Beste ist für beschränkte $\sigma$ und $v$. Zweitens, dass die Verwendung einer Student'schen t-Verteilung anstatt einer Gaussverteilung den Vorteil hat, dass die Erkennungsrate wesentlich weniger von $\sigma$ abhängt.
 
@@ -203,17 +212,27 @@ z(t)=2a\sin(t/2)\\
 \end{equation} 
 
 \subsection{Auswertung der Phasenabschätzung}
-%TODO: Graphen einfügen
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{../Bilder/Fig6}
+\caption{}
+\label{fig:Fig6}
+\end{figure}
 Für diesen Fall wurde als Vorlage eine lineare Abstastung der Viviani-Kurve, und als Testdaten eine kubische Abtastung( $ t \rightarrow t^3 $ ) zu der ein gleichmäßig verteiltes Rauschen hinzugefügt wurde, verwendet. Der Zustandsraum ist hier dreidimensional, bestehend aus der Phase $ p_k \in [0,1] $, der Geschwindigkeit $v_k \in \mathbb{R}$ und der Skalierung $s_k \in \mathbb{R}$, wobei $v_k$ und $s_k$ so normalisiert sind, dass ein Wert von 1 jeweils der Geschwindigkeit bzw. Skalierung der Vorlage entspricht. Um einen Vergleich zu GF machen zu können, wurde $v \rightarrow \infty$ gewählt.
 
 Im Vergleich erreichten beide Verfahren gute Abschätzungen mit durchschnittlichen Fehlern von 1,3 Abtastungen beim GVF, bzw. 2,3 Abtastungen beim GF.
 
-Weiter wurde der Einfluss von $\sigma$ auf die Abschätzungen untersucht. Die Ergebnisse sind in Graph Z dargestellt. Für alle getesteten Werte für $\sigma$ lieferte GVF bessere Abschätzungen als GF, obwohl GF eine genauere Inferenztechnik verwendet. Dies liegt daran, dass GVF ein besseres kontinuierliches Modell verwendet, um die Daten wiederzuspiegeln, sowie an dem Zusammenhang zwischen Geschwindigkeit und Phase, welcher von GF ignoriert wird.
+Weiter wurde der Einfluss von $\sigma$ auf die Abschätzungen untersucht. Die Ergebnisse sind in Abbildung \ref{fig:Fig6} dargestellt. Für alle getesteten Werte für $\sigma$ lieferte GVF bessere Abschätzungen als GF, obwohl GF eine genauere Inferenztechnik verwendet. Dies liegt daran, dass GVF ein besseres kontinuierliches Modell verwendet, um die Daten wiederzuspiegeln, sowie an dem Zusammenhang zwischen Geschwindigkeit und Phase, welcher von GF ignoriert wird.
 
 Ebenso stellte sich heraus, dass GVF bessere Abschätzungen in Abhängigkeit von der Stärke des Rauschens liefert, als GF.
 
 \subsection{Auswertung der Rotationsabschätzung}
-%TODO: GRAPHEN!
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{../Bilder/Fig8}
+\caption{}
+\label{fig:Fig8}
+\end{figure}
 Für diesen Versuch wurde die Rotation der Geste mit der Zeit variiert. Die Drehwinkel $\phi$, $\theta$ und $\psi$ für die Drehung entlang der $x$, $y$ und $z$-Achse wurden pro Zeitschritt berechnet durch:
 \begin{equation}
 \begin{array}{rcl}
@@ -230,30 +249,80 @@ In beiden Experimenten wurde deutlich, dass $\sigma$ wenig Einfluss auf die Absc
 
 \section{Nutzerstudie}
 \subsection{Durchgeführte Experimente}
-%TODO: BILDER!
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{../Bilder/Fig10}
+\caption{Die von den Teilnehmern durchgeführten Gesten mit den dazugehörigen Tönen}
+\label{fig:Fig10}
+\end{figure}
 Es wurde eine Nutzerstudie durchgeführt, um die Einbindung von GVF in reale Anwendungen zu untersuchen. Hierfür wurde eine Anwendung entwickelt, wo eine Gestenausführung die Wiedergabe eines vordefinierten Tons hervorruft, welcher durch Variationen in der Geste verändert wurde. Hierbei wird die Früherkennung des GVF verwendet, um den Ton abzuspielen, sobald die Wahrscheinlichkeit der Erkennung über 50\% beträgt. Ab dann werden für den Rest der Geste die Abschätzung der Varianzen für die Manipulation des Tons verwendet. Hierbei sorgt eine schnellere/langsamere Ausführung der Geste für eine schnellere/langsamere Wiedergabe des Tons, größere/kleinere Gesten sorgen für eine lautere/leisere Wiedergabe und eine Drehung der Geste regelt die Cut-Off-Frequenz eines Hochpassfilters. Den Teilnehmern werden 7 Aufgaben gestellt, die alle daraus bestehen, einen bestimmten Ton abzuspielen, und ihn dann zu manipulieren. Hierbei ist zu beachten, dass Aufgabe 1 nur das Abspielen eines Tons, Aufgabe 2-4 eine globale Änderung eines Aspekts, Aufgabe 5 eine kontinuierliche Änderung eines Aspekts und Aufgabe 6 und 7 die globale Änderung zweier Aspekte beinhalten. Die Gesten werden von einem infrarotbasiertem System aufgenommen, welches Fingerbewegungen im freien Raum misst. Die Studie wurde mit 10 Teilnehmern durchgeführt, die jede der 3 Gesten 3 Mal pro Aufgabe durchführten. Somit ergeben sich 630 Datensätze. Jede aufgenommene Geste sowie der zugehörige wiedergegebene Ton wurden im Nachhinein analysiert, um die Abschätzung des Algorithmus auszuwerten.
 
-\subsection{Beurteilung der Erkennungsgenauigkeit}
+
+
 Zunächst wurde die Erkennungsrate allgemein untersucht. Insgesamt wurden nur 17 Gesten nicht erkannt, es ergibt sich somit eine Erkennungsgenauigkeit von $97,3\%$. Anschließend wurde die Früherkennung der Gesten untersucht. Hierbei galt eine Geste als erkannt, sobald die Erkennungswarscheinlichkeit größer als $50\%$ ist. Im Durchschnitt wurde eine Geste nach $12,6\%$ der Durchführung erkannt.
 
 \subsection{Anpassung einer Eigenschaft}
 In den Aufgaben 2 bis 4 wurden die Teilnehmer beauftragt, eine Eigenschaft(Lautstärke, Geschwindigkeit und den Hochpassfilter) zu manipulieren. Die Ergebnisse wurden mithilfe eines Student'schen T-Tests mit den Ergebnissen von Aufgabe 1 verglichen.
 
 \subsubsection{lauteres Abspielen des Tons}
-%TODO: GRAPHEN
-In dem Diagramm wird deutlich, dass die Teilnehmer in der Lage waren, den Ton lauter als normal abzuspielen, da es signifikante Unterschiede der Mittelwerte von Aufgabe 1 und 2 gab. Ebenso zeigt sich, dass die Teilnehmer die Gesten wie gefordert größer ausgeführt haben, was von der Abschätzung auch wiedergespiegelt wurde.
+\subsection{Beurteilung der Erkennungsgenauigkeit}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{../Bilder/Fig13}
+\caption{Ergebnisse von Aufgabe 2 im Vergleich mit 1}
+\label{fig:Fig13}
+\end{figure}
+In Abbildung \ref{fig:Fig13} wird deutlich, dass die Teilnehmer in der Lage waren, den Ton lauter als normal abzuspielen, da es signifikante Unterschiede der Mittelwerte von Aufgabe 1 und 2 gab. Ebenso zeigt sich, dass die Teilnehmer die Gesten wie gefordert größer ausgeführt haben, was von der Abschätzung auch wiedergespiegelt wurde.
 
 \subsubsection{schnelleres Abspielen des Tons}
-%TODO: GRAPHEN
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{../Bilder/Fig14}
+\caption{Ergebnisse von Aufgabe 3 im Vergleich mit 1}
+\label{fig:Fig14}
+\end{figure}
+
 Auch hier waren die Teilnehmer in der Lage, die Aufgabe zu erfüllen, da die durchschnittliche Länge eines Tons kürzer war als bei Aufgabe 1. Es ist aber zu bemerken, dass die Teilnehmer, wenn gebeten den Ton in Originalgeschwindigkeit abzuspielen, ihn etwas langsamer als das Original abspielten. Auch in diesem Versuch erkannte der Algorithmus eine Zunahme der Geschwindigkeit der Geste.
 
 \subsubsection{Beeinflussung des Hochpassfilters}
-%TODO: GRAPHEN
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{../Bilder/Fig15}
+\caption{Ergebnisse von Aufgabe 4 im Vergleich mit 1}
+\label{fig:Fig15}
+\end{figure}
+
 Obwohl mangels Referenzpunkte für diese Aufgabe keine Nachanalyse der Geste möglich war, wurde vom Algorithmus eine Drehung der Geste gemeldet, was sich in der Anwendung des Hochpassfilters deutlich macht.
 
 \subsection{kontinuierliche Änderung einer Eigenschaft}
-%TODO: GRAPHEN
-In Aufgabe 5 wurde von den Teilnehmern verlangt, den Ton zumächst laut zu spielen und während der Ausführung der Geste leiser zu werden. 
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{../Bilder/Fig16}
+\caption{Geschätzte Geschwindigkeit im Verlauf der Geste}
+\label{fig:Fig16}
+\end{figure}
+
+In Aufgabe 5 wurde von den Teilnehmern verlangt, den Ton zumächst laut zu spielen und während der Ausführung der Geste leiser zu werden. Wenn man die geschätzten Werte bei $0$, $50$ und $100\%$ Fortschritt betrachtet, so wird deutlich, dass die Größe der Geste zunächst zunimmt und in der zweiten Hälfte wieder fällt. Somit wird deutlich, dass die Teilnehmer die Aufgabe erfolgreich bewältigt haben.
+
+\subsection{Änderung zweier Eigenschaften}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{../Bilder/Fig17}
+\caption{Ergebnisse von Aufgabe 6 im Vergleich mit 1}
+\label{fig:Fig17}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{../Bilder/Fig18}
+\caption{Ergebnisse von Aufgabe 7 im Vergleich mit 1}
+\label{fig:Fig18}
+\end{figure}
+
+In den Aufgaben 6 und 7 wurde von den Teilnehmern verlangt, den Ton lauter und langsamer, bzw. leiser mit Hochpassfilter zu spielen. Wie aus den Abbildungen \ref{fig:Fig17} und \ref{fig:Fig18} deutlich wird, ist dies den Teilnehmern gelungen.
+
+\subsection{Beobachtungen der Nutzerstudie}
+Insgesamt haben die Teilnehmer die ihnen gestellten Aufgaben verstanden, und haben es geschafft, die verlangten Ergebnnisse zu erzielen. Die Analyse der wiedergegebenen Töne und abgeschätzten Variationen macht deutlich, dass der Algorithmus die Gesten richtig abschätzt.
+
 
 
  

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.14)  5 JUL 2015 20:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.14)  5 JUL 2015 20:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -376,32 +376,126 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (./paper.aux)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count117
+))
+\Gin@req@height=\dimen125
+\Gin@req@width=\dimen126
+)
+(./paper.aux)
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
-LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Try loading font information for U+msa on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count118
+\scratchdimen=\dimen127
+\scratchbox=\box54
+\nofMPsegments=\count119
+\nofMParguments=\count120
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count121
+\MPscratchDim=\dimen128
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
+\everyMPtoPDFconversion=\toks23
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Try loading font information for U+msa on input line 26.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 25.
+LaTeX Font Info:    Try loading font information for U+msb on input line 26.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 25.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 26.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -409,59 +503,127 @@ File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 115--124
+Underfull \hbox (badness 10000) in paragraph at lines 116--125
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--124
+Underfull \hbox (badness 10000) in paragraph at lines 116--125
 
  []
 
-[4] [5] [6] [7]
-Overfull \hbox (3.6278pt too wide) in paragraph at lines 209--210
+[4] [5] <../Bilder/Fig4.png, id=37, 693.792pt x 474.573pt>
+File: ../Bilder/Fig4.png Graphic file (type png)
+
+<use ../Bilder/Fig4.png>
+Package pdftex.def Info: ../Bilder/Fig4.png used on input line 183.
+(pdftex.def)             Requested size: 242.98541pt x 166.2044pt.
+ [6] [7 <../Bilder/Fig4.png>]
+<../Bilder/Fig6.png, id=47, 582.37575pt x 738.96075pt>
+File: ../Bilder/Fig6.png Graphic file (type png)
+
+<use ../Bilder/Fig6.png>
+Package pdftex.def Info: ../Bilder/Fig6.png used on input line 217.
+(pdftex.def)             Requested size: 242.98541pt x 308.32051pt.
+ [8 <../Bilder/Fig6.png>]
+Overfull \hbox (3.6278pt too wide) in paragraph at lines 223--224
 []\T1/cmr/m/n/10 Im Ver-gleich er-reich-ten bei-de Ver-fah-ren gu-te Ab-schät-z
 un-gen mit durch-schnitt-
  []
 
-[8]
-Overfull \hbox (29.17346pt too wide) in paragraph at lines 240--241
+<../Bilder/Fig8.png, id=51, 983.47424pt x 317.38576pt>
+File: ../Bilder/Fig8.png Graphic file (type png)
+
+<use ../Bilder/Fig8.png>
+Package pdftex.def Info: ../Bilder/Fig8.png used on input line 232.
+(pdftex.def)             Requested size: 242.98541pt x 78.41156pt.
+ [9 <../Bilder/Fig8.png>]
+<../Bilder/Fig10.png, id=55, 459.51675pt x 293.898pt>
+File: ../Bilder/Fig10.png Graphic file (type png)
+
+<use ../Bilder/Fig10.png>
+Package pdftex.def Info: ../Bilder/Fig10.png used on input line 254.
+(pdftex.def)             Requested size: 242.98541pt x 155.40642pt.
+ [10 <../Bilder/Fig10.png>]
+Overfull \hbox (29.17346pt too wide) in paragraph at lines 265--266
 \T1/cmr/m/n/10 In den Auf-ga-ben 2 bis 4 wur-den die Teil-neh-mer be-auf-tragt,
  ei-ne Ei-gen-schaft(Lautstärke,
  []
 
-[9] (./paper.bbl) [10] (./paper.aux) ) 
+<../Bilder/Fig13.png, id=59, 958.782pt x 407.121pt>
+File: ../Bilder/Fig13.png Graphic file (type png)
+ <use ../Bilder/Fig13.png>
+Package pdftex.def Info: ../Bilder/Fig13.png used on input line 271.
+(pdftex.def)             Requested size: 242.98541pt x 103.17773pt.
+
+<../Bilder/Fig14.png, id=60, 941.919pt x 403.5075pt>
+File: ../Bilder/Fig14.png Graphic file (type png)
+ <use ../Bilder/Fig14.png>
+Package pdftex.def Info: ../Bilder/Fig14.png used on input line 280.
+(pdftex.def)             Requested size: 242.98541pt x 104.09059pt.
+
+[11 <../Bilder/Fig13.png>]
+<../Bilder/Fig15.png, id=64, 953.964pt x 413.1435pt>
+File: ../Bilder/Fig15.png Graphic file (type png)
+ <use ../Bilder/Fig15.png>
+Package pdftex.def Info: ../Bilder/Fig15.png used on input line 290.
+(pdftex.def)             Requested size: 242.98541pt x 105.22726pt.
+
+<../Bilder/Fig16.png, id=65, 494.44725pt x 498.06075pt>
+File: ../Bilder/Fig16.png Graphic file (type png)
+
+<use ../Bilder/Fig16.png>
+Package pdftex.def Info: ../Bilder/Fig16.png used on input line 300.
+(pdftex.def)             Requested size: 242.98541pt x 244.75868pt.
+ [12 <../Bilder/Fig14.png> <../Bilder/Fig15.png>]
+<../Bilder/Fig17.png, id=69, 922.04475pt x 581.7735pt>
+File: ../Bilder/Fig17.png Graphic file (type png)
+
+<use ../Bilder/Fig17.png>
+Package pdftex.def Info: ../Bilder/Fig17.png used on input line 310.
+(pdftex.def)             Requested size: 242.98541pt x 153.30815pt.
+
+<../Bilder/Fig18.png, id=70, 949.74825pt x 579.96675pt>
+File: ../Bilder/Fig18.png Graphic file (type png)
+
+<use ../Bilder/Fig18.png>
+Package pdftex.def Info: ../Bilder/Fig18.png used on input line 316.
+(pdftex.def)             Requested size: 242.98541pt x 148.3807pt.
+ (./paper.bbl [13 <../Bilder/Fig16.png>] [14 <../Bilder/Fig17.png> <../Bilder/F
+ig18.png>]) [15] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
- 1823 strings out of 494419
- 20133 string characters out of 6164222
- 82999 words of memory out of 5000000
- 5079 multiletter control sequences out of 15000+600000
- 14827 words of font info for 43 fonts, out of 8000000 for 9000
+ 3133 strings out of 494419
+ 39904 string characters out of 6164222
+ 105757 words of memory out of 5000000
+ 6313 multiletter control sequences out of 15000+600000
+ 15603 words of font info for 44 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
- 29i,13n,26p,1598b,238s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/marian/.texmf-var/fonts/pk/ljfour
-/jknappen/ec/ecti0900.600pk> </home/marian/.texmf-var/fonts/pk/ljfour/jknappen/
-ec/ecbx1000.600pk> </home/marian/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx120
-0.600pk> </home/marian/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0900.600pk> <
-/home/marian/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/mari
-an/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/marian/.texmf-
-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on paper.pdf (10 pages, 244904 bytes).
+ 37i,13n,26p,1598b,306s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/marian/.texmf-var/fonts/pk/ljfour/jknap
+pen/ec/ecti0900.600pk> </home/marian/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecb
+x0900.600pk> </home/marian/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600p
+k> </home/marian/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/
+marian/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0900.600pk> </home/marian/.te
+xmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/marian/.texmf-var/fo
+nts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/marian/.texmf-var/fonts/pk/ljf
+our/jknappen/ec/ecbx1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/symbols/msbm10.pfb>
+Output written on paper.pdf (15 pages, 789123 bytes).
 PDF statistics:
- 463 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
+ 514 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
