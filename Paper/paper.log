@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.14)  5 JUL 2015 20:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.14)  5 JUL 2015 21:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -518,87 +518,94 @@ File: ../Bilder/Fig4.png Graphic file (type png)
 <use ../Bilder/Fig4.png>
 Package pdftex.def Info: ../Bilder/Fig4.png used on input line 183.
 (pdftex.def)             Requested size: 242.98541pt x 166.2044pt.
- [6] [7 <../Bilder/Fig4.png>]
-<../Bilder/Fig6.png, id=47, 582.37575pt x 738.96075pt>
+
+<../Bilder/Tabelle1.png, id=38, 810.6285pt x 284.262pt>
+File: ../Bilder/Tabelle1.png Graphic file (type png)
+
+<use ../Bilder/Tabelle1.png>
+Package pdftex.def Info: ../Bilder/Tabelle1.png used on input line 198.
+(pdftex.def)             Requested size: 242.98541pt x 85.2055pt.
+ [6] [7 <../Bilder/Fig4.png> <../Bilder/Tabelle1.png>] <../Bilder/Fig6.png, id=
+48, 582.37575pt x 738.96075pt>
 File: ../Bilder/Fig6.png Graphic file (type png)
 
 <use ../Bilder/Fig6.png>
-Package pdftex.def Info: ../Bilder/Fig6.png used on input line 217.
+Package pdftex.def Info: ../Bilder/Fig6.png used on input line 224.
 (pdftex.def)             Requested size: 242.98541pt x 308.32051pt.
- [8 <../Bilder/Fig6.png>]
-Overfull \hbox (3.6278pt too wide) in paragraph at lines 223--224
+ [8] [9 <../Bilder/Fig6.png>]
+Overfull \hbox (3.6278pt too wide) in paragraph at lines 230--231
 []\T1/cmr/m/n/10 Im Ver-gleich er-reich-ten bei-de Ver-fah-ren gu-te Ab-schät-z
 un-gen mit durch-schnitt-
  []
 
-<../Bilder/Fig8.png, id=51, 983.47424pt x 317.38576pt>
+<../Bilder/Fig8.png, id=55, 983.47424pt x 317.38576pt>
 File: ../Bilder/Fig8.png Graphic file (type png)
 
 <use ../Bilder/Fig8.png>
-Package pdftex.def Info: ../Bilder/Fig8.png used on input line 232.
+Package pdftex.def Info: ../Bilder/Fig8.png used on input line 239.
 (pdftex.def)             Requested size: 242.98541pt x 78.41156pt.
- [9 <../Bilder/Fig8.png>]
-<../Bilder/Fig10.png, id=55, 459.51675pt x 293.898pt>
+ [10 <../Bilder/Fig8.png>]
+<../Bilder/Fig10.png, id=59, 459.51675pt x 293.898pt>
 File: ../Bilder/Fig10.png Graphic file (type png)
 
 <use ../Bilder/Fig10.png>
-Package pdftex.def Info: ../Bilder/Fig10.png used on input line 254.
+Package pdftex.def Info: ../Bilder/Fig10.png used on input line 261.
 (pdftex.def)             Requested size: 242.98541pt x 155.40642pt.
- [10 <../Bilder/Fig10.png>]
-Overfull \hbox (29.17346pt too wide) in paragraph at lines 265--266
+ [11 <../Bilder/Fig10.png>]
+Overfull \hbox (29.17346pt too wide) in paragraph at lines 272--273
 \T1/cmr/m/n/10 In den Auf-ga-ben 2 bis 4 wur-den die Teil-neh-mer be-auf-tragt,
  ei-ne Ei-gen-schaft(Lautstärke,
  []
 
-<../Bilder/Fig13.png, id=59, 958.782pt x 407.121pt>
+<../Bilder/Fig13.png, id=63, 958.782pt x 407.121pt>
 File: ../Bilder/Fig13.png Graphic file (type png)
  <use ../Bilder/Fig13.png>
-Package pdftex.def Info: ../Bilder/Fig13.png used on input line 271.
+Package pdftex.def Info: ../Bilder/Fig13.png used on input line 278.
 (pdftex.def)             Requested size: 242.98541pt x 103.17773pt.
 
-<../Bilder/Fig14.png, id=60, 941.919pt x 403.5075pt>
+<../Bilder/Fig14.png, id=64, 941.919pt x 403.5075pt>
 File: ../Bilder/Fig14.png Graphic file (type png)
  <use ../Bilder/Fig14.png>
-Package pdftex.def Info: ../Bilder/Fig14.png used on input line 280.
+Package pdftex.def Info: ../Bilder/Fig14.png used on input line 287.
 (pdftex.def)             Requested size: 242.98541pt x 104.09059pt.
 
-[11 <../Bilder/Fig13.png>]
-<../Bilder/Fig15.png, id=64, 953.964pt x 413.1435pt>
+[12 <../Bilder/Fig13.png>]
+<../Bilder/Fig15.png, id=68, 953.964pt x 413.1435pt>
 File: ../Bilder/Fig15.png Graphic file (type png)
  <use ../Bilder/Fig15.png>
-Package pdftex.def Info: ../Bilder/Fig15.png used on input line 290.
+Package pdftex.def Info: ../Bilder/Fig15.png used on input line 297.
 (pdftex.def)             Requested size: 242.98541pt x 105.22726pt.
 
-<../Bilder/Fig16.png, id=65, 494.44725pt x 498.06075pt>
+<../Bilder/Fig16.png, id=69, 494.44725pt x 498.06075pt>
 File: ../Bilder/Fig16.png Graphic file (type png)
 
 <use ../Bilder/Fig16.png>
-Package pdftex.def Info: ../Bilder/Fig16.png used on input line 300.
+Package pdftex.def Info: ../Bilder/Fig16.png used on input line 307.
 (pdftex.def)             Requested size: 242.98541pt x 244.75868pt.
- [12 <../Bilder/Fig14.png> <../Bilder/Fig15.png>]
-<../Bilder/Fig17.png, id=69, 922.04475pt x 581.7735pt>
+
+<../Bilder/Fig17.png, id=70, 922.04475pt x 581.7735pt>
 File: ../Bilder/Fig17.png Graphic file (type png)
 
 <use ../Bilder/Fig17.png>
-Package pdftex.def Info: ../Bilder/Fig17.png used on input line 310.
+Package pdftex.def Info: ../Bilder/Fig17.png used on input line 317.
 (pdftex.def)             Requested size: 242.98541pt x 153.30815pt.
-
-<../Bilder/Fig18.png, id=70, 949.74825pt x 579.96675pt>
+ [13 <../Bilder/Fig14.png> <../Bilder/Fig15.png>]
+<../Bilder/Fig18.png, id=75, 949.74825pt x 579.96675pt>
 File: ../Bilder/Fig18.png Graphic file (type png)
 
 <use ../Bilder/Fig18.png>
-Package pdftex.def Info: ../Bilder/Fig18.png used on input line 316.
+Package pdftex.def Info: ../Bilder/Fig18.png used on input line 323.
 (pdftex.def)             Requested size: 242.98541pt x 148.3807pt.
- (./paper.bbl [13 <../Bilder/Fig16.png>] [14 <../Bilder/Fig17.png> <../Bilder/F
-ig18.png>]) [15] (./paper.aux) ) 
+ [14 <../Bilder/Fig16.png>] [15 <../Bilder/Fig17.png> <../Bilder/Fig18.png>] (.
+/paper.bbl) [16] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
- 3133 strings out of 494419
- 39904 string characters out of 6164222
- 105757 words of memory out of 5000000
- 6313 multiletter control sequences out of 15000+600000
+ 3139 strings out of 494419
+ 40037 string characters out of 6164222
+ 105767 words of memory out of 5000000
+ 6318 multiletter control sequences out of 15000+600000
  15603 words of font info for 44 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
- 37i,13n,26p,1598b,306s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,13n,26p,1598b,239s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/marian/.texmf-var/fonts/pk/ljfour/jknap
 pen/ec/ecti0900.600pk> </home/marian/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecb
 x0900.600pk> </home/marian/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600p
@@ -620,10 +627,10 @@ s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb>
-Output written on paper.pdf (15 pages, 789123 bytes).
+Output written on paper.pdf (16 pages, 824547 bytes).
 PDF statistics:
- 514 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
+ 519 PDF objects out of 1000 (max. 8388607)
+ 111 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
