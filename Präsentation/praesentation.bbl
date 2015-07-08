@@ -1,9 +1,29 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{4}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[D.M.Gavrila and L.S.Davis(1995)]{Gawrila1995}
+D.M.Gavrila and L.S.Davis.
+\newblock Towards 3-d model-based tracking and recognition of human movement: A
+  multi-view approach.
+\newblock \emph{Proceedings of the International Workshop on Automatic Face and
+  Gesture recognition}, 1995.
+
+\bibitem[Liu et~al.(2009)Liu, Zhong, Wickramasuriya, and Vasudevan]{Liu2009}
+J.~Liu, L.~Zhong, J.~Wickramasuriya, and V.~Vasudevan.
+\newblock Uwave: Accelerometer-based personalized gesture recognition and its
+  applications.
+\newblock \emph{Pervasive and Mobile Computing 5}, 2009.
+
+\bibitem[M.Black and A.Jepson(1998)]{BlackandJepson1998a}
+M.Black and A.Jepson.
+\newblock A probabilistic framework formatching tempora
+  ltrajectories:condensation based recognition of gestures and expressions.
+\newblock \emph{Proceedings of the European Conference on Computer Vision
+  (ECCV’98)}, 1998.
 
 \bibitem[Wobbrock et~al.(2007)Wobbrock, Wilson, and Li]{Wobbrock2007}
 O.~Wobbrock, A.~D. Wilson, and Y.~Li.
