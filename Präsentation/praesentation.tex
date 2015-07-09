@@ -49,7 +49,7 @@
 \end{column}
 \end{columns}
 \end{frame}
-\begin{frame}\frametitle{Vorgeschlagene Methode}
+\begin{frame}\frametitle{Vorgeschlagene Methode}  
 \begin{itemize}
 \item Verwendung eines Partikelfilters
 \item frühzeitige Erkennung und Rückmeldung von Variationsinformationen, z. B. Geschwindigkeit, Drehung, etc.
@@ -61,12 +61,12 @@
 \end{frame}
 \begin{frame}\frametitle{Ähnliche Arbeiten}
 \begin{itemize}
-\item Templatebasierte Erkennung (\citet{Wobbrock2007}):
+\item Templatebasierte Erkennung (\$1 Recognizer) (\citet{Wobbrock2007}):
 \begin{itemize}
 \item Vorverarbeitung der aufgenommenen Daten
 \item Erkennung mithilfe euklidischen Abstands
 \end{itemize}
-\item Dynamic Time Warping(\citet{Gawrila1995,Liu2009})
+\item Dynamic Time Warping (DTW) (\citet{Gawrila1995,Liu2009})
 \begin{itemize}
 \item Erfassung der gesamten Geste
 \item Anpassung durch Strecken/Stauchen der Vorlage
@@ -111,7 +111,7 @@
 
 \begin{frame}\frametitle{zugrundeliegendes Modell}
 \begin{itemize}
-\item Geste: Gliedmaßenbewegung, die durch eine Zeitserie einer festen Anzahl parameter Vertreten wird
+\item Geste: Gliedmaßenbewegung, die durch eine Zeitserie einer festen Anzahl Parameter vertreten wird
 \item Zustandsmodell zum Zeitpunkt $k$:
 \begin{equation}
 \left\{\begin{array}{l}
@@ -122,7 +122,7 @@ z_k = f_{OB} (x_k, w_k; g) \\
 \begin{itemize}
 \item $x_k$: Vektor des Systemzustands, mit den Gestenparametern als Elemente
 \item $f_{TR}$ Funktion für die Entwicklung des Zustands, abhängig vom vorherigen Zustand und der Abweichungssequenz $v_k$
-\item $f_{OB}$ Funktion, die aus den Messwerten $w_k$, dem vorherigen Zustand und einer Tempplategeste $g$ Beobachtungen generiert
+\item $f_{OB}$ Funktion, die aus den Messwerten $w_k$, dem vorherigen Zustand und einer Templategeste $g$ Beobachtungen generiert
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -156,6 +156,193 @@ z_k = f_{OB} (x_k, w_k; g) \\
 \end{itemize}
 \item Der erwartete Gesamtzustand ist dann durch die gewichtete Summe aller Partikel gegeben
 \item Um zwischen verschiedenen Gesten zu unterscheiden, wird der Zustandsraum um einen Gestenindex erweitert und die Partikel gleichmäßig über alle Gestenindizes verteilt.
+\end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Erkennung realer 2D-Gesten}
+\begin{columns}
+\begin{column}{.6\textwidth}
+\begin{itemize}
+\item Gestendatenbank von \citet{Wobbrock2007}:
+\begin{itemize}
+\item 2D-Stiftgesten
+\item 16 Gesten * 10 Teilnehmer * 3 Geschwindigkeiten * 10 Versuche = 4800 aufgenommene Gesten
+\end{itemize}
+\item jeweils ein Datensatz als Template und einer als gemessene Geste
+\item 4 Versuche:
+\begin{itemize}
+\item Erkennung  Gesten gleicher Geschwindigkeit
+\item Einfluss der Verteilungsparameter auf die Erkennung
+\item Erkennung bei Beispielen verschiedener Geschwindigkeiten
+\item Früherkennung
+\end{itemize}
+\end{itemize}
+\end{column}
+\begin{column}{.4\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{../Bilder/Fig3}
+\label{fig:Fig3}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Erkennung realer 2D-Gesten}
+Testergebnisse
+\begin{columns}
+\begin{column}{.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{../Bilder/Tabelle1cut}
+\label{fig:Tabelle1}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{../Bilder/Fig4}
+\label{fig:Fig4}
+\end{figure}
+\end{column}
+\begin{column}{.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{../Bilder/Tabelle2cut}
+\label{fig:Tabelle2}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{../Bilder/Fig5}
+\label{fig:Fig5}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Abschätzung der Varianz anhand synthetischer Daten}
+\begin{columns}
+\begin{column}{.6\textwidth}
+\begin{itemize}
+\item Test der Varianzabschätzung
+\item synthetische Daten, da Menschen keine exakte Varianz liefern können
+\item Gesten in Form einer Viviani-Kurve:
+\begin{equation}
+C(t)=\left\{\begin{array}{l}
+x(t)=a(1+\cos(t))\\
+y(t)=a\sin(t)\\
+z(t)=2a\sin(t/2)\\
+\end{array}\right.
+\end{equation} 
+\begin{itemize}
+\item Vorlage lineare Abtastung der Kurve
+\item Testgeste kubische Abtastung + gleichmäßig verteiltes Rauschen
+\end{itemize}
+\end{itemize}
+\end{column}
+\begin{column}{.4\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{../Bilder/Viviani_curve}
+\label{fig:Viviani_curve}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Abschätzung der Varianz anhand synthetischer Daten}
+\begin{columns}
+\begin{column}{.5\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{../Bilder/Fig6}
+\label{fig:Fig6}
+\end{figure}
+\end{column}
+\begin{column}{.25\textwidth}
+\includegraphics[width=\linewidth]{../Bilder/Fig8a}\\
+\includegraphics[width=\linewidth]{../Bilder/Fig8b}\\
+\includegraphics[width=\linewidth]{../Bilder/Fig8c}\\
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Nutzerstudie}
+\begin{columns}
+\begin{column}{.5\textwidth}
+\begin{itemize}
+\item Untersuchung der Einbindung in Anwendungen
+\item Gestenausführung startet Wiedergabe eines Tons, Variationen der Geste verändern ihn
+\begin{itemize}
+\item Geste gilt als erkannt, wenn Wahrscheinlichkeit $>$50\%
+\item schneller/langsamer $\rightarrow$ schnellere/langsamere Wiedergabe
+\item Gestengröße $\rightarrow$ Lautstärke
+\item Gestendrehung $\rightarrow$ Hochpassfilter
+\end{itemize}
+\item Nachberechnung der tatsächlichen Varianzen zum Vergleich mit den geschätzten
+\end{itemize}
+\end{column}
+\begin{column}{.5\textwidth}
+\includegraphics[width=\linewidth]{../Bilder/Fig10}\\
+\begin{itemize}
+\item Teilnehmer sollten:
+\begin{itemize}
+\item Geste unverändert ausführen
+\item Geste mit einem veränderten Parameter ausführen
+\item ein Parameter während der Ausführung verändern
+\item Geste mit zwei veränderten Parametern ausführen
+\end{itemize}
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}\frametitle{Nutzerstudie}
+Ergebnisse mit einem veränderten Parameter
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{../Bilder/Fig13}
+\label{fig:Fig13}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{../Bilder/Fig14}
+\label{fig:Fig14}
+\end{figure}
+\end{frame}
+
+\begin{frame}\frametitle{Nutzerstudie}
+Ergebnisse mit einem kontinuierlich veränderten Parameter
+\begin{itemize}
+\item Teilnehmer sollten Ton zunächst laut spielen, dann leiser werden
+\end{itemize}
+\begin{figure}
+\centering
+\includegraphics[width=0.68\linewidth]{../Bilder/Fig16}
+\label{fig:Fig16}
+\end{figure}
+\end{frame}
+
+\begin{frame}\frametitle{Nutzerstudie}
+Ergebnisse mit zwei geänderten Parametern
+\begin{figure}
+\centering
+\includegraphics[width=0.5\linewidth]{../Bilder/Fig17}
+\label{fig:Fig17}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.5\linewidth]{../Bilder/Fig18}
+\label{fig:Fig18}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}\frametitle{Fazit}
+\begin{itemize}
+\item Algorithmus zur Erkennung von Gesten, der Variationen in Echtzeit mitteilt.
+\item im Vergleich durchweg bessere Ergebnisse als andere Algorithmen aus dieser Klasse
+\item Erkennung starker Variationen der Gesten ohne Beispiele der Variationen
+\item frühzeitige Erkennung
+\item somit starke Verbesserung gegenüber anderen Methoden
 \end{itemize}
 \end{frame}
 

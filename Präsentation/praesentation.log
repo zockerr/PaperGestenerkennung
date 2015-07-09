@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.14)  8 JUL 2015 17:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.14)  9 JUL 2015 16:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1112,8 +1112,149 @@ Package pdftex.def Info: ../Bilder/Fig2.png used on input line 147.
 
  <../Bilder/Fig2.png>] [8
 
+]
+<../Bilder/Fig3.png, id=249, 403.5075pt x 469.15276pt>
+File: ../Bilder/Fig3.png Graphic file (type png)
+
+<use ../Bilder/Fig3.png>
+Package pdftex.def Info: ../Bilder/Fig3.png used on input line 189.
+(pdftex.def)             Requested size: 136.91603pt x 159.18768pt.
+ [9
+
+ <../Bilder/Fig3.png>]
+<../Bilder/Tabelle1cut.png, id=277, 790.75426pt x 222.23026pt>
+File: ../Bilder/Tabelle1cut.png Graphic file (type png)
+
+<use ../Bilder/Tabelle1cut.png>
+Package pdftex.def Info: ../Bilder/Tabelle1cut.png used on input line 219.
+(pdftex.def)             Requested size: 171.14764pt x 48.09732pt.
+
+<../Bilder/Fig4.png, id=278, 693.792pt x 474.573pt>
+File: ../Bilder/Fig4.png Graphic file (type png)
+ <use ../Bilder/Fig4.png>
+Package pdftex.def Info: ../Bilder/Fig4.png used on input line 219.
+(pdftex.def)             Requested size: 171.14764pt x 117.06433pt.
+
+<../Bilder/Tabelle2cut.png, id=279, 735.9495pt x 169.8345pt>
+File: ../Bilder/Tabelle2cut.png Graphic file (type png)
+
+<use ../Bilder/Tabelle2cut.png>
+Package pdftex.def Info: ../Bilder/Tabelle2cut.png used on input line 219.
+(pdftex.def)             Requested size: 171.14764pt x 39.49388pt.
+
+<../Bilder/Fig5.png, id=280, 635.37375pt x 495.0495pt>
+File: ../Bilder/Fig5.png Graphic file (type png)
+
+<use ../Bilder/Fig5.png>
+Package pdftex.def Info: ../Bilder/Fig5.png used on input line 219.
+(pdftex.def)             Requested size: 171.14764pt x 133.34789pt.
+ [10
+
+ <../Bilder/Tabelle1cut.png (PNG copy)> <../Bilder/Fig4.png> <../Bilder/Tabelle
+2cut.png (PNG copy)> <../Bilder/Fig5.png>]
+<../Bilder/Viviani_curve.png, id=311, 632.3625pt x 762.85pt>
+File: ../Bilder/Viviani_curve.png Graphic file (type png)
+
+<use ../Bilder/Viviani_curve.png>
+Package pdftex.def Info: ../Bilder/Viviani_curve.png used on input line 249.
+(pdftex.def)             Requested size: 136.91603pt x 165.16193pt.
+ [11
+
+ <../Bilder/Viviani_curve.png (PNG copy)>] <../Bilder/Fig6.png, id=339, 582.375
+75pt x 738.96075pt>
+File: ../Bilder/Fig6.png Graphic file (type png)
+
+<use ../Bilder/Fig6.png>
+Package pdftex.def Info: ../Bilder/Fig6.png used on input line 266.
+(pdftex.def)             Requested size: 171.14764pt x 217.16841pt.
+ <../Bilder/Fig8a.png, id=340, 296.307pt x 262.581pt>
+File: ../Bilder/Fig8a.png Graphic file (type png)
+
+<use ../Bilder/Fig8a.png>
+Package pdftex.def Info: ../Bilder/Fig8a.png used on input line 266.
+(pdftex.def)             Requested size: 85.57382pt x 75.83401pt.
+
+<../Bilder/Fig8b.png, id=342, 293.898pt x 261.97874pt>
+File: ../Bilder/Fig8b.png Graphic file (type png)
+
+<use ../Bilder/Fig8b.png>
+Package pdftex.def Info: ../Bilder/Fig8b.png used on input line 266.
+(pdftex.def)             Requested size: 85.57382pt x 76.2797pt.
+
+<../Bilder/Fig8c.png, id=343, 295.1025pt x 265.59225pt>
+File: ../Bilder/Fig8c.png Graphic file (type png)
+
+<use ../Bilder/Fig8c.png>
+Package pdftex.def Info: ../Bilder/Fig8c.png used on input line 266.
+(pdftex.def)             Requested size: 85.57382pt x 77.01572pt.
+ [12
+
+ <../Bilder/Fig6.png> <../Bilder/Fig8a.png> <../Bilder/Fig8b.png> <../Bilder/Fi
+g8c.png>]
+<../Bilder/Fig10.png, id=375, 459.51675pt x 293.898pt>
+File: ../Bilder/Fig10.png Graphic file (type png)
+
+<use ../Bilder/Fig10.png>
+Package pdftex.def Info: ../Bilder/Fig10.png used on input line 296.
+(pdftex.def)             Requested size: 171.14764pt x 109.46255pt.
+ [13
+
+ <../Bilder/Fig10.png>]
+<../Bilder/Fig13.png, id=404, 958.782pt x 407.121pt>
+File: ../Bilder/Fig13.png Graphic file (type png)
+ <use ../Bilder/Fig13.png>
+Package pdftex.def Info: ../Bilder/Fig13.png used on input line 310.
+(pdftex.def)             Requested size: 239.60567pt x 101.74272pt.
+
+<../Bilder/Fig14.png, id=405, 941.919pt x 403.5075pt>
+File: ../Bilder/Fig14.png Graphic file (type png)
+
+<use ../Bilder/Fig14.png>
+Package pdftex.def Info: ../Bilder/Fig14.png used on input line 310.
+(pdftex.def)             Requested size: 239.60567pt x 102.64369pt.
+
+Overfull \vbox (8.5091pt too high) detected at line 310
+ []
+
+[14
+
+ <../Bilder/Fig13.png> <../Bilder/Fig14.png>]
+<../Bilder/Fig16.png, id=434, 494.44725pt x 498.06075pt>
+File: ../Bilder/Fig16.png Graphic file (type png)
+
+<use ../Bilder/Fig16.png>
+Package pdftex.def Info: ../Bilder/Fig16.png used on input line 322.
+(pdftex.def)             Requested size: 232.75829pt x 234.46097pt.
+
+Overfull \vbox (40.18365pt too high) detected at line 322
+ []
+
+[15
+
+ <../Bilder/Fig16.png>]
+<../Bilder/Fig17.png, id=462, 922.04475pt x 581.7735pt>
+File: ../Bilder/Fig17.png Graphic file (type png)
+
+<use ../Bilder/Fig17.png>
+Package pdftex.def Info: ../Bilder/Fig17.png used on input line 337.
+(pdftex.def)             Requested size: 171.14764pt x 107.98149pt.
+
+<../Bilder/Fig18.png, id=463, 949.74825pt x 579.96675pt>
+File: ../Bilder/Fig18.png Graphic file (type png)
+
+<use ../Bilder/Fig18.png>
+Package pdftex.def Info: ../Bilder/Fig18.png used on input line 337.
+(pdftex.def)             Requested size: 171.14764pt x 104.50455pt.
+
+Overfull \vbox (16.60872pt too high) detected at line 337
+ []
+
+[16
+
+ <../Bilder/Fig17.png> <../Bilder/Fig18.png>] [17
+
 ] (./praesentation.bbl)
-[9
+[18
 
 ]
 \tf@nav=\write6
@@ -1125,11 +1266,11 @@ Package pdftex.def Info: ../Bilder/Fig2.png used on input line 147.
 \tf@snm=\write8
 \openout8 = `praesentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 168.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 168.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 355.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 355.
  (./praesentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 168.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 168.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 355.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 355.
 Package rerunfilecheck Info: File `praesentation.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1137,16 +1278,16 @@ Package rerunfilecheck Info: File `praesentation.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 168.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 355.
  ) 
 Here is how much of TeX's memory you used:
- 16640 strings out of 494419
- 303857 string characters out of 6164222
- 386891 words of memory out of 5000000
- 19452 multiletter control sequences out of 15000+600000
+ 16780 strings out of 494419
+ 306176 string characters out of 6164222
+ 388189 words of memory out of 5000000
+ 19546 multiletter control sequences out of 15000+600000
  12160 words of font info for 47 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
- 49i,16n,57p,429b,711s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,16n,57p,429b,724s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texli
@@ -1157,12 +1298,13 @@ pe1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msa
-m7.pfb>
-Output written on praesentation.pdf (9 pages, 506869 bytes).
+msy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb
+>
+Output written on praesentation.pdf (18 pages, 1255978 bytes).
 PDF statistics:
- 320 PDF objects out of 1000 (max. 8388607)
- 282 compressed objects within 3 object streams
- 24 named destinations out of 1000 (max. 500000)
- 69 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 601 PDF objects out of 1000 (max. 8388607)
+ 531 compressed objects within 6 object streams
+ 54 named destinations out of 1000 (max. 500000)
+ 149 words of extra memory for PDF output out of 10000 (max. 10000000)
 
